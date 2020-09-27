@@ -14,6 +14,7 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] private int cellSize;
     [SerializeField] private int wallSize;
     private Stack<Vector2Int> positionStack = new Stack<Vector2Int>();
+    private List<Vector2Int> visitedCellsPosition = new List<Vector2Int>();
     private int visitedCellsCount;
     private int[,] maze;
 
@@ -22,7 +23,13 @@ public class MazeGenerator : MonoBehaviour
     {
         maze = new int[mazeWidth, mazeHeight];
         
-        DrawMaze();
+        MazeAlgorithm(Vector2Int.zero);
+        foreach (var direction in maze)
+        {
+            Debug.Log(direction);
+        }
+        
+        //DrawMaze();
     }
 
     /// <summary>
@@ -37,6 +44,52 @@ public class MazeGenerator : MonoBehaviour
             for (int cellY = 0; cellY < cellSize; cellY++)
             {
                 pathTilemap.SetTile(new Vector3Int(x * (cellSize + wallSize) + cellX, y * (cellSize + wallSize) + cellY, 0), pathTile);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Draws a connection between two cells
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    private void DrawConnection(int x, int y)
+    {
+        int direction = maze[x, y];
+
+        switch (direction)
+        {
+            case 0:
+            {
+                for (int posX = x; posX < cellSize; posX++)
+                {
+                    pathTilemap.SetTile(new Vector3Int(posX, y + cellSize + 1, 0), pathTile);
+                }
+                break;
+            }
+            case 1:
+            {
+                for (int posX = x; posX < cellSize; posX++)
+                {
+                    pathTilemap.SetTile(new Vector3Int(posX, y - 1, 0), pathTile);
+                }
+                break;
+            }
+            case 2:
+            {
+                for (int posY = y; posY < cellSize; posY++)
+                {
+                    pathTilemap.SetTile(new Vector3Int(x + cellSize + 1, posY, 0), pathTile);
+                }
+                break;
+            }
+            case 3:
+            {
+                for (int posY = y; posY < cellSize; posY++)
+                {
+                    pathTilemap.SetTile(new Vector3Int(x - 1, posY, 0), pathTile);
+                }
+                break;
             }
         }
     }
@@ -67,32 +120,43 @@ public class MazeGenerator : MonoBehaviour
     /// </summary>
     private void MazeAlgorithm(Vector2Int startPos)
     {
-        Vector2Int pos = startPos;
-        positionStack.Push(pos);
+        Vector2Int currentPos = startPos;
+        positionStack.Push(currentPos);
+        visitedCellsPosition.Add(currentPos);
         visitedCellsCount++;
         List<int> availableDirections = new List<int>(); //0: North | 1: South | 2: East | 3: West
         
         while (visitedCellsCount < mazeWidth * mazeHeight) //Goes through all available cells
         {
             availableDirections.Clear();
-            
-            //Searches for neighbour cells that hasn't been visited
-            for (int posX = pos.x - 1; posX < pos.x + 2; posX++)
-            {
-                for (int posY = pos.y - 1; posY < pos.y + 2; posY++)
-                {
-                    if (posX < 0 || posX > mazeWidth || posY < 0 || posY > mazeHeight) //Prevents index out of bounds
-                    {
-                        break;
-                    }
 
-                    if (maze[posX, posY] == 0) //Checks if it hasn't been visited
-                    {
-                        if (posX > pos.x) availableDirections.Add(0);
-                        if (posX < pos.x) availableDirections.Add(1);
-                        if (posY > pos.y) availableDirections.Add(2);
-                        if (posY < pos.y) availableDirections.Add(3);
-                    }
+            //Searches for neighbour cells that haven't been visited
+            if (currentPos.y + 1 < mazeHeight)
+            {
+                if (!visitedCellsPosition.Contains(new Vector2Int(currentPos.x, currentPos.y + 1)))
+                {
+                    availableDirections.Add(0);
+                }
+            }
+            if (currentPos.y - 1 >= 0)
+            {
+                if (!visitedCellsPosition.Contains(new Vector2Int(currentPos.x, currentPos.y - 1)))
+                {
+                    availableDirections.Add(1);
+                }
+            }
+            if (currentPos.x + 1 < mazeWidth)
+            {
+                if (!visitedCellsPosition.Contains(new Vector2Int(currentPos.x + 1, currentPos.y)))
+                {
+                    availableDirections.Add(2);
+                }
+            }
+            if (currentPos.x - 1 >= 0)
+            {
+                if (!visitedCellsPosition.Contains(new Vector2Int(currentPos.x - 1, currentPos.y)))
+                {
+                    availableDirections.Add(3);
                 }
             }
 
@@ -100,7 +164,8 @@ public class MazeGenerator : MonoBehaviour
             if (availableDirections.Count == 0)
             {
                 positionStack.Pop(); //Backtracks
-                pos = positionStack.Peek();
+                currentPos = positionStack.Peek();
+                break;
             }
             
             //Chooses a random direction
@@ -110,31 +175,32 @@ public class MazeGenerator : MonoBehaviour
             {
                 case 0: //North
                 {
-                    pos.y++;
-                    maze[pos.x, pos.y] = 1; //Saves the connection between current cell and next cell direction (South)
+                    currentPos.y++;
+                    maze[currentPos.x, currentPos.y] = 1; //Saves the connection between current cell and next cell direction (South)
                     break;
                 }
                 case 1: //South
                 {
-                    pos.y--;
-                    maze[pos.x, pos.y] = 0; //Saves the connection between current cell and next cell direction (North)
+                    currentPos.y--;
+                    maze[currentPos.x, currentPos.y] = 0; //Saves the connection between current cell and next cell direction (North)
                     break;
                 }
                 case 2: //East
                 {
-                    pos.x++;
-                    maze[pos.x, pos.y] = 3; //Saves the connection between current cell and next cell direction (West)
+                    currentPos.x++;
+                    maze[currentPos.x, currentPos.y] = 3; //Saves the connection between current cell and next cell direction (West)
                     break;
                 }
                 case 3: //West
                 {
-                    pos.x--;
-                    maze[pos.x, pos.y] = 2; //Saves the connection between current cell and next cell direction (East)
+                    currentPos.x--;
+                    maze[currentPos.x, currentPos.y] = 2; //Saves the connection between current cell and next cell direction (East)
                     break;
                 }
             }
 
-            positionStack.Push(pos);
+            positionStack.Push(currentPos);
+            visitedCellsPosition.Add(currentPos);
             visitedCellsCount++;
         }
     }
@@ -149,9 +215,10 @@ public class MazeGenerator : MonoBehaviour
             for (int y = 0; y < mazeHeight; y++)
             {
                 DrawCell(x, y);
+                DrawConnection(x, y);
             }
         }
         
-        GenerateWalls();
+        //GenerateWalls();
     }
 }

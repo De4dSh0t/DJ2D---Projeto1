@@ -20,24 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="401a7faa-f989-419b-b7e3-844574a82d6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Sprites/Path.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Sprites/Path.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Sprites/Wall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Sprites/Wall.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Tiles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Tiles/PathTile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Tiles/PathTile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Tiles/WallTile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Tiles/WallTile.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +54,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3497758" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.2998879" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -86,10 +72,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3276">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="3276" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -105,8 +91,16 @@
       <option name="presentableId" value="Default" />
       <updated>1601214550312</updated>
       <workItem from="1601214564274" duration="6198000" />
-      <workItem from="1601221210445" duration="4638000" />
+      <workItem from="1601221210445" duration="9326000" />
     </task>
+    <task id="LOCAL-00001" summary="Initialized Project">
+      <created>1601226119597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601226119597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,8 +123,78 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initialized Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialized Project" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1815" height="391" key="GridCell.Tab.0.bottom" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.0.center" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.0.left" timestamp="1601228770239">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770239" />
+    <state width="1815" height="391" key="GridCell.Tab.0.right" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.1.bottom" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.1.center" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.1.left" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.1.right" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.2.bottom" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.2.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.2.center" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.2.center/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.2.left" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.2.left/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.2.right" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.2.right/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.3.bottom" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.3.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.3.center" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.3.center/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.3.left" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.3.left/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state width="1815" height="391" key="GridCell.Tab.3.right" timestamp="1601228770240">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="391" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1601228770240" />
+    <state x="583" y="273" key="Vcs.Push.Dialog.v2" timestamp="1601226121580">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="583" y="273" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1601226121580" />
     <state x="639" y="275" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1601225525521">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
