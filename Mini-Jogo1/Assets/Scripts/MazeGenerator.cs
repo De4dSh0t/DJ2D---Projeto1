@@ -24,12 +24,7 @@ public class MazeGenerator : MonoBehaviour
         maze = new int[mazeWidth, mazeHeight];
         
         MazeAlgorithm(Vector2Int.zero);
-        foreach (var direction in maze)
-        {
-            Debug.Log(direction);
-        }
-        
-        //DrawMaze();
+        DrawMaze();
     }
 
     /// <summary>
@@ -59,35 +54,35 @@ public class MazeGenerator : MonoBehaviour
 
         switch (direction)
         {
-            case 0:
+            case 0: //North
             {
-                for (int posX = x; posX < cellSize; posX++)
+                for (int posX = x * (cellSize + wallSize); posX < x * (cellSize + wallSize) + cellSize; posX++)
                 {
-                    pathTilemap.SetTile(new Vector3Int(posX, y + cellSize + 1, 0), pathTile);
+                    pathTilemap.SetTile(new Vector3Int(posX, y * (cellSize + wallSize) + cellSize, 0), pathTile);
                 }
                 break;
             }
-            case 1:
+            case 1: //South
             {
-                for (int posX = x; posX < cellSize; posX++)
+                for (int posX = x * (cellSize + wallSize); posX < x * (cellSize + wallSize) + cellSize; posX++)
                 {
-                    pathTilemap.SetTile(new Vector3Int(posX, y - 1, 0), pathTile);
+                    pathTilemap.SetTile(new Vector3Int(posX, y * (cellSize + wallSize) - 1, 0), pathTile);
                 }
                 break;
             }
-            case 2:
+            case 2: //East
             {
-                for (int posY = y; posY < cellSize; posY++)
+                for (int posY = y * (cellSize + wallSize); posY < y * (cellSize + wallSize) + cellSize; posY++)
                 {
-                    pathTilemap.SetTile(new Vector3Int(x + cellSize + 1, posY, 0), pathTile);
+                    pathTilemap.SetTile(new Vector3Int(x * (cellSize + wallSize) + cellSize, posY, 0), pathTile);
                 }
                 break;
             }
-            case 3:
+            case 3: //West
             {
-                for (int posY = y; posY < cellSize; posY++)
+                for (int posY = y * (cellSize + wallSize); posY < y * (cellSize + wallSize) + cellSize; posY++)
                 {
-                    pathTilemap.SetTile(new Vector3Int(x - 1, posY, 0), pathTile);
+                    pathTilemap.SetTile(new Vector3Int(x * (cellSize + wallSize) - 1, posY, 0), pathTile);
                 }
                 break;
             }
