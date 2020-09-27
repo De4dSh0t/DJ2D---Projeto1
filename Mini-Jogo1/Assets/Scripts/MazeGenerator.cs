@@ -92,7 +92,7 @@ public class MazeGenerator : MonoBehaviour
     /// <summary>
     /// Generates walls, taking into account the "pathTilemap" boundaries
     /// </summary>
-    private void GenerateWalls()
+    private void DrawWalls()
     {
         BoundsInt bounds = pathTilemap.cellBounds; //Saves the boundaries of a the "groundMap" tilemap
         
@@ -155,12 +155,12 @@ public class MazeGenerator : MonoBehaviour
                 }
             }
 
-            //Checks if there is any available direction
+            //Checks if there is no available direction
             if (availableDirections.Count == 0)
             {
                 positionStack.Pop(); //Backtracks
                 currentPos = positionStack.Peek();
-                break;
+                continue;
             }
             
             //Chooses a random direction
@@ -214,6 +214,6 @@ public class MazeGenerator : MonoBehaviour
             }
         }
         
-        //GenerateWalls();
+        DrawWalls();
     }
 }

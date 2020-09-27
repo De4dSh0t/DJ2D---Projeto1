@@ -238,8 +238,8 @@ MonoBehaviour:
   wallTilemap: {fileID: 588612038}
   pathTile: {fileID: 11400000, guid: cfb37b39c6d1b804b8594836ffb2df6a, type: 2}
   wallTile: {fileID: 11400000, guid: 8228dc4e1d8965f45b5c47e446ed5c72, type: 2}
-  mazeWidth: 10
-  mazeHeight: 10
+  mazeWidth: 20
+  mazeHeight: 20
   cellSize: 2
   wallSize: 1
 --- !u!156049354 &520721940
