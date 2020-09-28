@@ -5,10 +5,14 @@ using UnityEngine.Tilemaps;
 
 public class MazeGenerator : MonoBehaviour
 {
+    [Header("Tile Settings")]
     [SerializeField] private Tilemap pathTilemap;
     [SerializeField] private Tilemap wallTilemap;
     [SerializeField] private Tile pathTile;
     [SerializeField] private Tile wallTile;
+
+    [Header("Maze Settings")]
+    [SerializeField] private Vector2Int startPos = Vector2Int.zero;
     [SerializeField] private int mazeWidth;
     [SerializeField] private int mazeHeight;
     [SerializeField] private int cellSize;
@@ -23,7 +27,7 @@ public class MazeGenerator : MonoBehaviour
     {
         maze = new int[mazeWidth, mazeHeight];
         
-        MazeAlgorithm(Vector2Int.zero);
+        MazeAlgorithm(startPos);
         DrawMaze();
     }
 
@@ -201,13 +205,13 @@ public class MazeGenerator : MonoBehaviour
     }
 
     /// <summary>
-    /// Abstractly generates the grid used by the maze
+    /// Draws the maze, using the maze 2D array
     /// </summary>
     private void DrawMaze()
     {
-        for (int x = 0; x < mazeWidth; x++)
+        for (int x = startPos.x; x < mazeWidth; x++)
         {
-            for (int y = 0; y < mazeHeight; y++)
+            for (int y = startPos.y; y < mazeHeight; y++)
             {
                 DrawCell(x, y);
                 DrawConnection(x, y);
