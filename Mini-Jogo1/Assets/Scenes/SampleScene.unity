@@ -484,7 +484,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textInput: {fileID: 1041056029}
-  messages: []
 --- !u!4 &756185981
 Transform:
   m_ObjectHideFlags: 0
@@ -1086,6 +1085,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1551369976}
   - component: {fileID: 1551369975}
+  - component: {fileID: 1551369977}
+  - component: {fileID: 1551369978}
   m_Layer: 0
   m_Name: Friend
   m_TagString: Untagged
@@ -1157,6 +1158,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1551369977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551369974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05058597e480b7047b86cf6726871f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands: []
+  wallTilemap: {fileID: 0}
+  moveDistance: 0
+--- !u!114 &1551369978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551369974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05058597e480b7047b86cf6726871f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commands:
+  - LEFT
+  - RIGHT
+  - UP
+  - DOWN
+  wallTilemap: {fileID: 588612038}
+  moveDistance: 3
 --- !u!1 &1969416347
 GameObject:
   m_ObjectHideFlags: 0

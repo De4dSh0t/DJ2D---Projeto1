@@ -9,7 +9,8 @@ using UnityEngine.UIElements;
 public class PlayerTextInput : MonoBehaviour
 {
     [SerializeField] private TMP_InputField textInput;
-    public List<string> messages;
+    
+    public static Action<string> OnTextInput; //Used to notify the "friend" bot
 
     private void Update()
     {
@@ -22,7 +23,10 @@ public class PlayerTextInput : MonoBehaviour
 
     private void SaveText()
     {
-        messages.Add(textInput.text);
+        if (OnTextInput != null)
+        {
+            OnTextInput(textInput.text);
+        }
     }
 
     private void ClearText()

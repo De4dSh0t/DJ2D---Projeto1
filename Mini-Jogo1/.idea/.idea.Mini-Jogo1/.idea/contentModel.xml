@@ -8,7 +8,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Chat" t="Include">
+            <e p="ChatSystem.cs" t="Include" />
             <e p="PlayerTextInput.cs" t="Include" />
+          </e>
+          <e p="Friend" t="Include">
+            <e p="FriendBehaviour.cs" t="Include" />
           </e>
           <e p="Maze" t="Include">
             <e p="MazeGenerator.cs" t="Include" />
