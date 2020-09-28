@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -16,7 +17,7 @@ public class FriendBehaviour : MonoBehaviour
     void Start()
     {
         friendPos = GetComponent<Transform>();
-        PlayerTextInput.OnTextInput += TryMove;
+        PlayerTextInput.OnTextInput += TryMove; //Subscribes to the action "OnTextInput"
     }
 
     /// <summary>
@@ -26,70 +27,89 @@ public class FriendBehaviour : MonoBehaviour
     /// <returns></returns>
     private void TryMove(string textInput)
     {
-        int direction = -2;
+        string[] words = textInput.Split(' ');
+        int direction = -1;
         Vector3 currentPos = friendPos.position;
+        int nMoves = 0;
+        bool canMove = true;
         
+        if (Int32.TryParse(words[0], out int result))
+        {
+            nMoves = result;
+        }
+        
+        //Checks if the input correspond to any command
         for (int i = 0; i < commands.Count; i++)
         {
-            if (textInput.ToUpper() == commands[i])
+            if (words[1].ToUpper() == commands[i])
             {
                 direction = i;
                 break;
             }
         }
 
-        switch (direction)
+        //Moves the "friend" bot "nMoves" times, allways checking if it's possible to do so
+        for (int i = 0; i < nMoves; i++)
         {
-            case -1: //WALL (CAN'T MOVE)
+            switch (direction)
             {
-                Debug.Log("There is a wall in front of me!");
-                break;
-            }
-            case 0: //LEFT
-            {
-                if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x - 1, (int) currentPos.y, 0)))
+                case -2: //WALL (CAN'T MOVE)
                 {
-                    goto case -1;
+                    Debug.Log("There is a wall in front of me!");
+                    canMove = false;
+                    break;
                 }
-                
-                friendPos.Translate(Vector2.left * moveDistance);
-                break;
-            }
-            case 1: //RIGHT
-            {
-                if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x + 1, (int) currentPos.y, 0)))
+                case -1: //WRONG COMMAND
                 {
-                    goto case -1;
+                    Debug.Log("Not a command!");
+                    canMove = false;
+                    break;
                 }
-                
-                friendPos.Translate(Vector2.right * moveDistance);
-                break;
-            }
-            case 2: //UP
-            {
-                if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x, (int) currentPos.y + 1, 0)))
+                case 0: //LEFT
                 {
-                    goto case -1;
+                    if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x - 2, (int) currentPos.y, 0)))
+                    {
+                        goto case -2;
+                    }
+                            
+                    friendPos.Translate(Vector2.left * moveDistance);
+                    break;
                 }
-                
-                friendPos.Translate(Vector2.up * moveDistance);
-                break;
-            }
-            case 3: //DOWN
-            {
-                if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x, (int) currentPos.y - 1, 0)))
+                case 1: //RIGHT
                 {
-                    goto case -1;
+                    if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x + 1, (int) currentPos.y, 0)))
+                    {
+                        goto case -2;
+                    }
+                            
+                    friendPos.Translate(Vector2.right * moveDistance);
+                    break;
                 }
-                
-                friendPos.Translate(Vector2.down * moveDistance);
-                break;
+                case 2: //UP
+                {
+                    if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x, (int) currentPos.y + 1, 0)))
+                    {
+                        goto case -2;
+                    }
+                            
+                    friendPos.Translate(Vector2.up * moveDistance);
+                    break;
+                }
+                case 3: //DOWN
+                {
+                    if (wallTilemap.HasTile(new Vector3Int((int) currentPos.x, (int) currentPos.y - 2, 0)))
+                    {
+                        goto case -2;
+                    }
+                            
+                    friendPos.Translate(Vector2.down * moveDistance);
+                    break;
+                }
             }
-            default: //WRONG COMMAND
-            {
-                Debug.Log("Not a command!");
-                break;
-            }
+            
+            if(!canMove) break;
+
+            currentPos = friendPos.position;
         }
     }
 }
