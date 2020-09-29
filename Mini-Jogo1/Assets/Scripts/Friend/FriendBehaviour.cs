@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 public class FriendBehaviour : MonoBehaviour
 {
     [Header("Commands Settings")]
-    [SerializeField] private List<string> commands = new List<string>();
+    [SerializeField] private string[] commands;
 
     [Header("Movement Settings")] 
     [SerializeField] private Tilemap wallTilemap; //To prevent the player going over walls
@@ -32,19 +32,22 @@ public class FriendBehaviour : MonoBehaviour
         Vector3 currentPos = friendPos.position;
         int nMoves = 0;
         bool canMove = true;
-        
-        if (Int32.TryParse(words[0], out int result))
+
+        if (words.Length == 2)
         {
-            nMoves = result;
-        }
-        
-        //Checks if the input correspond to any command
-        for (int i = 0; i < commands.Count; i++)
-        {
-            if (words[1].ToUpper() == commands[i])
+            if (Int32.TryParse(words[0], out int result))
             {
-                direction = i;
-                break;
+                nMoves = result;
+            }
+        
+            //Checks if the input correspond to any command
+            for (int i = 0; i < commands.Length; i++)
+            {
+                if (words[1].ToUpper() == commands[i])
+                {
+                    direction = i;
+                    break;
+                }
             }
         }
 
