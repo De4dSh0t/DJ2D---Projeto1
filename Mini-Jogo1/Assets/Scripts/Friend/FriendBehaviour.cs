@@ -13,6 +13,8 @@ public class FriendBehaviour : MonoBehaviour
     [SerializeField] private Tilemap wallTilemap; //To prevent the player going over walls
     [SerializeField] private int moveDistance;
     private Transform friendPos;
+
+    public static Action<string> OnFriendResponse;
     
     void Start()
     {
@@ -30,7 +32,7 @@ public class FriendBehaviour : MonoBehaviour
         string[] words = textInput.Split(' ');
         int direction = -1;
         Vector3 currentPos = friendPos.position;
-        int nMoves = 0;
+        int nMoves = 1;
         bool canMove = true;
 
         if (words.Length == 2)
@@ -58,13 +60,15 @@ public class FriendBehaviour : MonoBehaviour
             {
                 case -2: //WALL (CAN'T MOVE)
                 {
-                    Debug.Log("There is a wall in front of me!");
+                    //Debug.Log("There is a wall in front of me!");
+                    OnFriendResponse("There is a wall in front of me!");
                     canMove = false;
                     break;
                 }
                 case -1: //WRONG COMMAND
                 {
-                    Debug.Log("Not a command!");
+                    //Debug.Log("Not a command!");
+                    OnFriendResponse("Not a command!");
                     canMove = false;
                     break;
                 }

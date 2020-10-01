@@ -32,5 +32,6 @@ public class PlayerTextInput : MonoBehaviour
     private void ClearText()
     {
         textInput.text = "";
+        textInput.ActivateInputField();
     }
 }

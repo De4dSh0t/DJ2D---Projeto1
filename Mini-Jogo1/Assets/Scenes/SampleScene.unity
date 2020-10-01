@@ -242,7 +242,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 6
-  m_Spacing: 1
+  m_Spacing: 25
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -624,9 +624,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chatPanel: {fileID: 471438530}
-  bubblePrefab: {fileID: 1139787290093563810, guid: 0c09e0e39527031449b3216542969834,
+  playerBubble: {fileID: 954427567834891971, guid: e2a347257dccd0545859103f85bcca6a,
     type: 3}
-  messages: []
+  friendBubble: {fileID: 48739284063191571, guid: ccd2434bcfbe0a2479d895a9ed6c845b,
+    type: 3}
+  messageList: []
   maxMessages: 20
 --- !u!1 &794872122
 GameObject:
@@ -663,8 +665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.869995, y: 0}
+  m_SizeDelta: {x: -5.730255, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794872124
 MonoBehaviour:
@@ -732,8 +734,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -935,8 +937,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 199.5, y: 30}
+  m_AnchoredPosition: {x: -0.5, y: 0}
+  m_SizeDelta: {x: 403.15338, y: 45.648033}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1041056029
 MonoBehaviour:
@@ -1180,8 +1182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.8676, y: 0}
+  m_SizeDelta: {x: -5.7351074, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296436235
 MonoBehaviour:
@@ -1229,8 +1231,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1416,8 +1418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: 0}
-  m_SizeDelta: {x: -16.99884, y: -16.999985}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -16.9897, y: -16.999985}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1764600265
 MonoBehaviour:
@@ -1506,8 +1508,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.5, y: 30}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 0.5102539, y: 45.64795}
+  m_SizeDelta: {x: 404.16382, y: 441.44604}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1917675710
 MonoBehaviour:
@@ -1624,10 +1626,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
