@@ -8,8 +8,10 @@ public class MazeGenerator : MonoBehaviour
     [Header("Tile Settings")]
     [SerializeField] private Tilemap pathTilemap;
     [SerializeField] private Tilemap wallTilemap;
+    [SerializeField] private Tilemap exitTilemap;
     [SerializeField] private Tile pathTile;
     [SerializeField] private Tile wallTile;
+    [SerializeField] private Tile exitTile;
 
     [Header("Maze Settings")]
     [SerializeField] private Vector2Int startPos = Vector2Int.zero;
@@ -19,6 +21,7 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] private int wallSize;
     private Stack<Vector2Int> positionStack = new Stack<Vector2Int>();
     private List<Vector2Int> visitedCellsPosition = new List<Vector2Int>();
+    private List<Vector2Int[]> stackList = new List<Vector2Int[]>();
     private int visitedCellsCount;
     private int[,] maze;
 
@@ -106,7 +109,7 @@ public class MazeGenerator : MonoBehaviour
             {
                 Vector3Int currentPos = new Vector3Int(xMap, yMap, 0); //Vector3Int of the current position
 
-                if (!pathTilemap.HasTile(currentPos)) //Checks if the cell ("tile") at the "currentPos" is empty (null)
+                if (!pathTilemap.HasTile(currentPos) && !exitTilemap.HasTile(currentPos)) //Checks if the cell ("tile") at the "currentPos" is empty (null)
                 {
                     wallTilemap.SetTile(currentPos, wallTile);
                 }
@@ -162,6 +165,7 @@ public class MazeGenerator : MonoBehaviour
             //Checks if there is no available direction
             if (availableDirections.Count == 0)
             {
+                stackList.Add(positionStack.ToArray()); //Saves current stack to determine the longest path
                 positionStack.Pop(); //Backtracks
                 currentPos = positionStack.Peek();
                 continue;
@@ -205,6 +209,34 @@ public class MazeGenerator : MonoBehaviour
     }
 
     /// <summary>
+    /// Determines the longest exit and draws
+    /// </summary>
+    private void DrawExit()
+    {
+        int iMax = 0;
+
+        for (int i = 1; i < stackList.Count; i++)
+        {
+            if (stackList[i].Length > stackList[iMax].Length)
+            {
+                iMax = i;
+            }
+        }
+
+        Vector2Int exitPos = stackList[iMax][0]; //Gets the first (last from stack) Vector2Int from the array with the most variables
+        
+        //Draws Tiles
+        for (int cellX = 0; cellX < cellSize; cellX++)
+        {
+            for (int cellY = 0; cellY < cellSize; cellY++)
+            {
+                exitTilemap.SetTile(new Vector3Int(exitPos.x * (cellSize + wallSize) + cellX, exitPos.y * (cellSize + wallSize) + cellY, 0), exitTile);
+                pathTilemap.SetTile(new Vector3Int(exitPos.x * (cellSize + wallSize) + cellX, exitPos.y * (cellSize + wallSize) + cellY, 0), null);
+            }
+        }
+    }
+
+    /// <summary>
     /// Draws the maze, using the maze 2D array
     /// </summary>
     private void DrawMaze()
@@ -218,6 +250,7 @@ public class MazeGenerator : MonoBehaviour
             }
         }
         
+        DrawExit();
         DrawWalls();
     }
 }

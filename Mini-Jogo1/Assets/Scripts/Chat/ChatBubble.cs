@@ -10,7 +10,7 @@ public class ChatBubble : MonoBehaviour
     [SerializeField] private TMP_Text message;
     private TMP_Text dummyText;
 
-    void Start()
+    void Awake()
     {
         dummyText = gameObject.GetComponent<TMP_Text>();
     }
@@ -30,7 +30,8 @@ public class ChatBubble : MonoBehaviour
         //Background
         message.ForceMeshUpdate(); //Assures that the "GetRenderedValues" allways gets the latest values
         Vector2 messageSize = message.GetRenderedValues(false);
-        Vector2 offset = new Vector2(2, 2);
-        //background.rectTransform.sizeDelta = messageSize + offset; //Resizes the text depending on message size
+        Vector2 padding = new Vector2(10, 10);
+        background.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,messageSize.x + padding.x); //Resizes the text depending on message size (X)
+        background.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,messageSize.y + padding.y); //Resizes the text depending on message size (Y)
     }
 }
