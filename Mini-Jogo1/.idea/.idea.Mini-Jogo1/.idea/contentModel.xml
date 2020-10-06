@@ -13,13 +13,15 @@
           <e p="Chat" t="Include">
             <e p="ChatBubble.cs" t="Include" />
             <e p="ChatSystem.cs" t="Include" />
-            <e p="PlayerTextInput.cs" t="Include" />
           </e>
           <e p="Friend" t="Include">
             <e p="FriendBehaviour.cs" t="Include" />
           </e>
           <e p="Maze" t="Include">
             <e p="MazeGenerator.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="PlayerTextInput.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Clock.cs" t="Include" />

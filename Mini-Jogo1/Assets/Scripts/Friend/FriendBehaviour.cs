@@ -69,14 +69,14 @@ public class FriendBehaviour : MonoBehaviour
                 {
                     if (!isRunning)
                     {
-                        OnFriendResponse("There is a wall in front of me!");
+                        if (OnFriendResponse != null) OnFriendResponse("There is a wall in front of me!");
                     }
                     canMove = false;
                     break;
                 }
                 case -1: //WRONG COMMAND
                 {
-                    OnFriendResponse("Not a command!");
+                    if (OnFriendResponse != null) OnFriendResponse("Not a command!");
                     canMove = false;
                     break;
                 }
