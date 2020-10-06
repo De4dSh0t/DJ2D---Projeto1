@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="401a7faa-f989-419b-b7e3-844574a82d6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Background.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/OS Icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/OS Icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/Power Button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/Power Button.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/Top Bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/Top Bar.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Sprites/Desktop Background.png.rsls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Temp Sprites/Desktop Background.png.rsls.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Game1.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FriendBubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FriendBubble.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerBubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerBubble.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +111,7 @@
       <workItem from="1601546728165" duration="2165000" />
       <workItem from="1601631922468" duration="6650000" />
       <workItem from="1601824898260" duration="3267000" />
-      <workItem from="1601933377046" duration="631000" />
+      <workItem from="1601933377046" duration="1155000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized Project">
       <created>1601226119597</created>
@@ -227,7 +211,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601828512997</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Updated gitignore to ignore resilio sync files">
+      <created>1601934342124</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1601934342124</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Created game scene and added some art assets">
+      <created>1601934371630</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1601934371630</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +262,9 @@
     <MESSAGE value="Updated &quot;ChatBubble&quot; and &quot;MazeGenerator&quot; (with exit generator)" />
     <MESSAGE value="Added &quot;Exit&quot; tilemap and some prefabs" />
     <MESSAGE value="Minor Updates and Added &quot;CameraSize&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor Updates and Added &quot;CameraSize&quot;" />
+    <MESSAGE value="Updated gitignore to ignore resilio sync files" />
+    <MESSAGE value="Created game scene and added some art assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created game scene and added some art assets" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1815" height="391" key="GridCell.Tab.0.bottom" timestamp="1601650804143">
@@ -331,10 +331,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="391" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1601650804144" />
-    <state x="475" y="218" key="Vcs.Push.Dialog.v2" timestamp="1601828516331">
+    <state x="475" y="218" key="Vcs.Push.Dialog.v2" timestamp="1601934372828">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="475" y="218" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1601828516331" />
+    <state x="475" y="218" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1601934372828" />
     <state x="583" y="273" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1601645035376" />
     <state x="639" y="275" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1601225525521">
       <screen x="62" y="0" width="1858" height="1080" />
