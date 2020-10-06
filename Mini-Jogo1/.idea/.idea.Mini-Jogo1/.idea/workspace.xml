@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="401a7faa-f989-419b-b7e3-844574a82d6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp.rsls" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +41,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/ruips/Resilio Sync/Documentos/Universidade/2º Ano/1º Semestre/Desenvolvimento de Jogos 2D/1. Projetos/DJ2D-Projeto1/Mini-Jogo1/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
@@ -56,6 +58,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraSize.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" />
       </list>
     </option>
   </component>
@@ -116,7 +119,7 @@
       <workItem from="1601631922468" duration="6650000" />
       <workItem from="1601824898260" duration="3267000" />
       <workItem from="1601933377046" duration="1155000" />
-      <workItem from="1601996837384" duration="996000" />
+      <workItem from="1601996837384" duration="2023000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized Project">
       <created>1601226119597</created>
@@ -237,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601996885425</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated FriendBehaviour with a &quot;run&quot; command">
+      <created>1601998018563</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1601998018563</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +287,8 @@
     <MESSAGE value="Updated gitignore to ignore resilio sync files" />
     <MESSAGE value="Created game scene and added some art assets" />
     <MESSAGE value="Updated Game1 Scene and organized some assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Game1 Scene and organized some assets" />
+    <MESSAGE value="Updated FriendBehaviour with a &quot;run&quot; command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated FriendBehaviour with a &quot;run&quot; command" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1815" height="391" key="GridCell.Tab.0.bottom" timestamp="1601650804143">
@@ -344,10 +355,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="391" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1601650804144" />
-    <state x="475" y="218" key="Vcs.Push.Dialog.v2" timestamp="1601996887144">
+    <state x="475" y="218" key="Vcs.Push.Dialog.v2" timestamp="1601998019721">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="475" y="218" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1601996887144" />
+    <state x="475" y="218" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1601998019721" />
     <state x="583" y="273" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1601645035376" />
     <state x="639" y="275" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1601225525521">
       <screen x="62" y="0" width="1858" height="1080" />
