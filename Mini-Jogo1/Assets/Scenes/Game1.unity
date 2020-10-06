@@ -1156,7 +1156,7 @@ MonoBehaviour:
   friendBubble: {fileID: 48739284063191571, guid: ccd2434bcfbe0a2479d895a9ed6c845b,
     type: 3}
   messageList: []
-  maxMessages: 20
+  maxMessages: 40
 --- !u!1 &794872122
 GameObject:
   m_ObjectHideFlags: 0

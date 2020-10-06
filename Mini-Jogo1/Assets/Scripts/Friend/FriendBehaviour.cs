@@ -34,12 +34,19 @@ public class FriendBehaviour : MonoBehaviour
         Vector3 currentPos = friendPos.position;
         int nMoves = 1;
         bool canMove = true;
+        bool isRunning = false; //Prevents the friend "bot" to respond to each "run" command
 
         if (words.Length == 2)
         {
+            //Parses the number of moves
             if (Int32.TryParse(words[0], out int result))
             {
                 nMoves = result;
+            }
+            else if (words[0].ToUpper() == "RUN") //Checks if the input corresponds to "run"
+            {
+                nMoves = wallTilemap.size.x; //Random num (with a minimum of the width of the wall tilemap)
+                isRunning = true;
             }
         
             //Checks if the input correspond to any command
@@ -60,14 +67,15 @@ public class FriendBehaviour : MonoBehaviour
             {
                 case -2: //WALL (CAN'T MOVE)
                 {
-                    //Debug.Log("There is a wall in front of me!");
-                    OnFriendResponse("There is a wall in front of me!");
+                    if (!isRunning)
+                    {
+                        OnFriendResponse("There is a wall in front of me!");
+                    }
                     canMove = false;
                     break;
                 }
                 case -1: //WRONG COMMAND
                 {
-                    //Debug.Log("Not a command!");
                     OnFriendResponse("Not a command!");
                     canMove = false;
                     break;
