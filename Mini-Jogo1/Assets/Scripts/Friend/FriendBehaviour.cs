@@ -15,7 +15,8 @@ public class FriendBehaviour : MonoBehaviour
     private Transform friendPos;
 
     public static Action<string> OnFriendResponse;
-    
+    public static Action<Vector3> OnFriendMove;
+
     void Start()
     {
         friendPos = GetComponent<Transform>();
@@ -67,7 +68,7 @@ public class FriendBehaviour : MonoBehaviour
             {
                 case -2: //WALL (CAN'T MOVE)
                 {
-                    if (!isRunning)
+                    if (!isRunning || i == 0)
                     {
                         if (OnFriendResponse != null) OnFriendResponse("There is a wall in front of me!");
                     }
@@ -125,6 +126,8 @@ public class FriendBehaviour : MonoBehaviour
             if(!canMove) break;
 
             currentPos = friendPos.position;
+
+            if (OnFriendMove != null) OnFriendMove(currentPos); //Used in "EnemyBehaviour"
         }
     }
 }

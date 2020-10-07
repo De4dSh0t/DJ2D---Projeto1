@@ -14,6 +14,9 @@
             <e p="ChatBubble.cs" t="Include" />
             <e p="ChatSystem.cs" t="Include" />
           </e>
+          <e p="Enemy" t="Include">
+            <e p="EnemyBehaviour.cs" t="Include" />
+          </e>
           <e p="Friend" t="Include">
             <e p="FriendBehaviour.cs" t="Include" />
           </e>
