@@ -8,12 +8,15 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private int friendStepsToMove;
     [SerializeField] private float secToMove;
     private Queue<Vector3> friendSteps = new Queue<Vector3>();
+    private SpriteRenderer spriteRenderer;
     private bool canMove;
     private float timer;
 
     void Start()
     {
         FriendBehaviour.OnFriendMove += UpdateQueue;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
         timer = secToMove;
     }
     
@@ -22,6 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (friendSteps.Count >= friendStepsToMove)
         {
             canMove = true;
+            spriteRenderer.enabled = true;
         }
         
         if (canMove && friendSteps.Count != 0)
