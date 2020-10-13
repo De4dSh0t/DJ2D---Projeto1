@@ -20,6 +20,9 @@
           <e p="Friend" t="Include">
             <e p="FriendBehaviour.cs" t="Include" />
           </e>
+          <e p="Manager" t="Include">
+            <e p="GameManager.cs" t="Include" />
+          </e>
           <e p="Maze" t="Include">
             <e p="MazeGenerator.cs" t="Include" />
           </e>
@@ -30,6 +33,9 @@
             <e p="Clock.cs" t="Include" />
           </e>
           <e p="Virus" t="Include">
+            <e p="Captcha" t="Include">
+              <e p="CaptchaBehaviour.cs" t="Include" />
+            </e>
             <e p="Sort Numbers" t="Include">
               <e p="ButtonBehaviour.cs" t="Include" />
               <e p="SortBehaviour.cs" t="Include" />

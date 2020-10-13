@@ -10,7 +10,7 @@ public class ChatSystem : MonoBehaviour
     [SerializeField] private GameObject friendBubble;
     [SerializeField] private List<GameObject> messageList = new List<GameObject>();
     [SerializeField] private int maxMessages = 20;
-    
+
     void Start()
     {
         PlayerTextInput.OnTextInput += DisplayPlayerText;
@@ -29,6 +29,8 @@ public class ChatSystem : MonoBehaviour
 
     private void DisplayPlayerText(string text)
     {
+        if (!GameManager.Instance.inGame) return;
+        
         GameObject message = Instantiate(playerBubble, chatPanel.transform);
         message.GetComponent<ChatBubble>().Setup(text);
         messageList.Add(message);
@@ -36,6 +38,8 @@ public class ChatSystem : MonoBehaviour
 
     private void DisplayFriendText(string text)
     {
+        if (!GameManager.Instance.inGame) return;
+        
         GameObject message = Instantiate(friendBubble, chatPanel.transform);
         message.GetComponent<ChatBubble>().Setup(text);
         messageList.Add(message);
