@@ -77,5 +77,10 @@ public class CaptchaBehaviour : MonoBehaviour
             if(OnPlayerSuccess != null) OnPlayerSuccess();
             Debug.Log("Success!");
         }
+        else
+        {
+            captcha = GenerateCaptcha();
+            captchaText.text = captcha;
+        }
     }
 }
