@@ -41,6 +41,10 @@
               <e p="ButtonBehaviour.cs" t="Include" />
               <e p="SortBehaviour.cs" t="Include" />
             </e>
+            <e p="Teleporting Buttons" t="Include">
+              <e p="ButtonInvisible.cs" t="Include" />
+              <e p="TeleportBehaviour.cs" t="Include" />
+            </e>
             <e p="VirusSystem.cs" t="Include" />
           </e>
         </e>

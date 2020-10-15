@@ -66,6 +66,7 @@ public class SortBehaviour : MonoBehaviour
             if (index >= 10)
             {
                 OnPlayerSuccess();
+                index = 0;
             }
         }
         else

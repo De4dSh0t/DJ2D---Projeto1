@@ -5,7 +5,8 @@ using UnityEngine;
 public class VirusSystem : MonoBehaviour
 {
     [SerializeField] private Canvas virusCanvas;
-    [SerializeField] private int playerSteps; //Steps to spawn the virus
+    [SerializeField] private int minPlayerSteps; //Steps to spawn the virus
+    [SerializeField] private int maxPlayerSteps; //Steps to spawn the virus
     [SerializeField] private List<GameObject> virusList = new List<GameObject>();
     private List<Vector3> playerPos = new List<Vector3>();
     private GameObject currentVirus;
@@ -17,8 +18,9 @@ public class VirusSystem : MonoBehaviour
         FriendBehaviour.OnFriendMove += UpdateList;
         CaptchaBehaviour.OnPlayerSuccess += Complete;
         SortBehaviour.OnPlayerSuccess += Complete;
+        TeleportBehaviour.OnPlayerSuccess += Complete;
         
-        stepsToSpawn = playerSteps;
+        stepsToSpawn = Random.Range(minPlayerSteps, maxPlayerSteps);
     }
     
     void Update()
@@ -26,7 +28,7 @@ public class VirusSystem : MonoBehaviour
         if (playerPos.Count >= stepsToSpawn && playerPos.Count != 0)
         {
             canSpawn = true;
-            stepsToSpawn += playerSteps;
+            stepsToSpawn += Random.Range(minPlayerSteps, maxPlayerSteps);
         }
 
         if (canSpawn)

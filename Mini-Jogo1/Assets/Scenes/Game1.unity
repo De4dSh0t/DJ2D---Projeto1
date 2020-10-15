@@ -972,10 +972,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virusCanvas: {fileID: 630319781}
-  playerSteps: 10
+  minPlayerSteps: 10
+  maxPlayerSteps: 20
   virusList:
   - {fileID: 1034449811747561518, guid: b4c2d43b6dbac814c8ac14ffe6bd598d, type: 3}
   - {fileID: 4970739740702128396, guid: dccd532f803b7e84abaab433e9856632, type: 3}
+  - {fileID: 6983634080324731963, guid: 4d1117549d1b7b64bbae23ebe4231837, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,8 +3845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: 0, y: 0.030000687}
+  m_SizeDelta: {x: -20, y: -6.64266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096338702
 MonoBehaviour:
