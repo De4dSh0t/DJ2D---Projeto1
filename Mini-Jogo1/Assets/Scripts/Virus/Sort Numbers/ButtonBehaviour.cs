@@ -12,13 +12,16 @@ public class ButtonBehaviour : MonoBehaviour
     private Color defaultColor;
 
     public static Action<string> OnButtonPressed;
-    
-    void Start()
+
+    private void Awake()
     {
         txt = GetComponentInChildren<TMP_Text>();
         button = GetComponent<Button>();
         defaultColor = button.image.color;
+    }
 
+    void Start()
+    {
         SortBehaviour.OnPlayerMiss += UnlockButton;
         SortBehaviour.OnPlayerSuccess += Completed;
     }
