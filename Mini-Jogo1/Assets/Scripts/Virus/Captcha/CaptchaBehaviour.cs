@@ -75,7 +75,6 @@ public class CaptchaBehaviour : MonoBehaviour
         if (attempt == captcha)
         {
             if(OnPlayerSuccess != null) OnPlayerSuccess();
-            Debug.Log("Success!");
         }
         else
         {

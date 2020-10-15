@@ -23,7 +23,6 @@ public class ButtonBehaviour : MonoBehaviour
     void Start()
     {
         SortBehaviour.OnPlayerMiss += UnlockButton;
-        SortBehaviour.OnPlayerSuccess += Completed;
     }
 
     /// <summary>
@@ -39,22 +38,19 @@ public class ButtonBehaviour : MonoBehaviour
     /// </summary>
     public void LockButton()
     {
-        button.enabled = false;
-        button.image.color = new Color(0.70f, 0.70f, 0.70f);
-        OnButtonPressed(txt.text);
+        if (button == null) return;
+        button.interactable = false;
+        button.image.color = new Color(0.08f, 0.27f, 0.48f);
+        if(OnButtonPressed != null) OnButtonPressed(txt.text);
     }
 
     /// <summary>
     /// Unlocks the button when player fails to sort the numbers
     /// </summary>
-    public void UnlockButton()
+    private void UnlockButton()
     {
-        button.enabled = true;
+        if (button == null) return;
+        button.interactable = true;
         button.image.color = defaultColor;
-    }
-
-    public void Completed()
-    {
-        button.image.color = new Color(0.43f, 0.92f, 0.31f);
     }
 }

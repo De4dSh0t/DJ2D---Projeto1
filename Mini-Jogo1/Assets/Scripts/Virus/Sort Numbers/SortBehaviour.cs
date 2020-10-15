@@ -65,7 +65,7 @@ public class SortBehaviour : MonoBehaviour
             // Successfully finishes the mini challenge
             if (index >= 10)
             {
-                OnPlayerSuccess();
+                if(OnPlayerSuccess != null) OnPlayerSuccess();
                 index = 0;
             }
         }
