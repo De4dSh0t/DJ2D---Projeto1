@@ -20,14 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="401a7faa-f989-419b-b7e3-844574a82d6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Virus - Alphabetic Order.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Virus - Alphabetic Order.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Virus - Captcha.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Virus - Captcha.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Virus - Sort Numbers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Virus - Sort Numbers.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Virus - TPButtons.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Virus - TPButtons.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp.rsls" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,12 +52,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../../../../../../../Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/HorizontalOrVerticalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,10 +84,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Colors/Dragable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -150,6 +158,7 @@
       <workItem from="1602616290974" duration="54000" />
       <workItem from="1602753931322" duration="9218000" />
       <workItem from="1602780750973" duration="11266000" />
+      <workItem from="1602951080395" duration="4618000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized Project">
       <created>1601226119597</created>

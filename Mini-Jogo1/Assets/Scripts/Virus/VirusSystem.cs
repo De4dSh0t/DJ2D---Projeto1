@@ -19,6 +19,7 @@ public class VirusSystem : MonoBehaviour
         CaptchaBehaviour.OnPlayerSuccess += Complete;
         SortBehaviour.OnPlayerSuccess += Complete;
         TeleportBehaviour.OnPlayerSuccess += Complete;
+        OrderBehaviour.OnPlayerSuccess += Complete;
         
         stepsToSpawn = Random.Range(minPlayerSteps, maxPlayerSteps);
     }
@@ -45,7 +46,8 @@ public class VirusSystem : MonoBehaviour
 
     private void SpawnVirus()
     {
-        currentVirus = Instantiate(virusList[Random.Range(0, virusList.Count)], virusCanvas.transform);
+        //currentVirus = Instantiate(virusList[Random.Range(0, virusList.Count)], virusCanvas.transform);
+        currentVirus = Instantiate(virusList[3], virusCanvas.transform);
         virusCanvas.gameObject.SetActive(true);
         GameManager.Instance.inGame = false;
     }

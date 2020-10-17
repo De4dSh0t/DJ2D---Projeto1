@@ -23,14 +23,17 @@ public class ButtonBehaviour : MonoBehaviour
     void Start()
     {
         SortBehaviour.OnPlayerMiss += UnlockButton;
+        OrderBehaviour.OnPlayerMiss += UnlockButton;
+        SortBehaviour.OnPlayerSuccess += Complete;
+        OrderBehaviour.OnPlayerSuccess += Complete;
     }
 
     /// <summary>
-    /// Sets the number of the button
+    /// Sets the text of the button
     /// </summary>
-    public void SetNumber(string num)
+    public void SetText(string s)
     {
-        txt.text = num;
+        txt.text = s;
     }
 
     /// <summary>
@@ -52,5 +55,16 @@ public class ButtonBehaviour : MonoBehaviour
         if (button == null) return;
         button.interactable = true;
         button.image.color = defaultColor;
+    }
+
+    /// <summary>
+    /// Removes all subscriptions (Actions)
+    /// </summary>
+    private void Complete()
+    {
+        SortBehaviour.OnPlayerMiss -= UnlockButton;
+        OrderBehaviour.OnPlayerMiss -= UnlockButton;
+        SortBehaviour.OnPlayerSuccess -= Complete;
+        OrderBehaviour.OnPlayerSuccess -= Complete;
     }
 }

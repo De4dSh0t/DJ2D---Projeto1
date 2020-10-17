@@ -75,6 +75,7 @@ public class CaptchaBehaviour : MonoBehaviour
         if (attempt == captcha)
         {
             if(OnPlayerSuccess != null) OnPlayerSuccess();
+            PlayerTextInput.OnTextInput -= Check;
         }
         else
         {
