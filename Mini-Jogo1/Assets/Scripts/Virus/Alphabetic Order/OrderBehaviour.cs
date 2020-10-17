@@ -61,7 +61,6 @@ public class OrderBehaviour : MonoBehaviour
     /// <param name="s"></param>
     private void CheckOrder(string s)
     {
-        Debug.Log(alphabeticOrder[index]);
         if (char.Parse(s) == alphabeticOrder[index])
         {
             index++;

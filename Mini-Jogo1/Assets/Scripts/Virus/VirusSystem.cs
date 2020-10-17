@@ -46,8 +46,7 @@ public class VirusSystem : MonoBehaviour
 
     private void SpawnVirus()
     {
-        //currentVirus = Instantiate(virusList[Random.Range(0, virusList.Count)], virusCanvas.transform);
-        currentVirus = Instantiate(virusList[3], virusCanvas.transform);
+        currentVirus = Instantiate(virusList[Random.Range(0, virusList.Count)], virusCanvas.transform);
         virusCanvas.gameObject.SetActive(true);
         GameManager.Instance.inGame = false;
     }
