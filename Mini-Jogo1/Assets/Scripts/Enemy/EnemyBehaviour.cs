@@ -9,7 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float secToMove;
     private Queue<Vector3> friendSteps = new Queue<Vector3>();
     private SpriteRenderer spriteRenderer;
-    private bool canMove;
+    public bool canMove;
     private float timer;
 
     void Start()

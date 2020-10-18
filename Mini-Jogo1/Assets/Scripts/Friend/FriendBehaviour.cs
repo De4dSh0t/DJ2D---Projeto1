@@ -20,6 +20,9 @@ public class FriendBehaviour : MonoBehaviour
     [SerializeField] private List<string> startingMonolgues;
     [SerializeField] private float tBetweenMonologues;
 
+    [Header("Enemy Settings")]
+    [SerializeField] private EnemyBehaviour enemy;
+
     public static Action<string> OnFriendResponse;
     public static Action<Vector3> OnFriendMove;
 
@@ -29,6 +32,12 @@ public class FriendBehaviour : MonoBehaviour
         PlayerTextInput.OnTextInput += TryMove; //Subscribes to the action "OnTextInput"
 
         StartCoroutine(StartingMonologue());
+    }
+
+    void Update()
+    {
+        CheckDeath();
+        CheckExit();
     }
 
     /// <summary>
@@ -151,5 +160,21 @@ public class FriendBehaviour : MonoBehaviour
         
         inputField.readOnly = false;
         inputField.ActivateInputField();
+    }
+
+    private void CheckExit()
+    {
+        if (transform.position == (Vector3Int) MazeGenerator.exitPos)
+        {
+            Debug.Log("Exit!");
+        }
+    }
+
+    private void CheckDeath()
+    {
+        if (enemy.transform.position == transform.position && enemy.canMove)
+        {
+            Debug.Log("Dead!");
+        }
     }
 }

@@ -24,6 +24,7 @@ public class MazeGenerator : MonoBehaviour
     private List<Vector2Int[]> stackList = new List<Vector2Int[]>();
     private int visitedCellsCount;
     private int[,] maze;
+    public static Vector2Int exitPos;
 
     // Start is called before the first frame update
     void Start()
@@ -223,7 +224,7 @@ public class MazeGenerator : MonoBehaviour
             }
         }
 
-        Vector2Int exitPos = stackList[iMax][0]; //Gets the first (last from stack) Vector2Int from the array with the most variables
+        exitPos = stackList[iMax][0]; //Gets the first (last from stack) Vector2Int from the array with the most variables
         
         //Draws Tiles
         for (int cellX = 0; cellX < cellSize; cellX++)

@@ -2657,9 +2657,10 @@ MonoBehaviour:
   - 'Lets make this simple:'
   - Say "run [direction]" and I'll run until I see a wall.
   - Say "[number of steps] [direction]" and I'll move x steps in that direction.
-  - The directions are "up", "down, "left" and "right".
+  - The directions are "up", "down", "left" and "right".
   - Please, lets rush it!
-  tBetweenMonologues: 2
+  tBetweenMonologues: 1.5
+  enemy: {fileID: 1727418913}
 --- !u!1 &1630608046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,6 +2948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   friendStepsToMove: 10
   secToMove: 2
+  canMove: 0
 --- !u!1 &1764600263
 GameObject:
   m_ObjectHideFlags: 0
