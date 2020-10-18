@@ -24,9 +24,9 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (friendSteps.Count >= friendStepsToMove)
         {
+            if (!canMove) FriendBehaviour.OnFriendResponse("I heard something! I think I'm not alone!");
             canMove = true;
             spriteRenderer.enabled = true;
-            FriendBehaviour.OnFriendResponse("I heard something! I think I'm not alone!");
         }
         
         if (canMove && friendSteps.Count != 0)

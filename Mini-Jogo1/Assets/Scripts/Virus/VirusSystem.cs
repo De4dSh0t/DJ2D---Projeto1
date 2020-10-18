@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class VirusSystem : MonoBehaviour
@@ -12,6 +13,8 @@ public class VirusSystem : MonoBehaviour
     private GameObject currentVirus;
     private bool canSpawn;
     private int stepsToSpawn;
+    private List<int> virusIndex; //Prevent repetition of viruses
+    private int previousVirus;
     
     void Start()
     {
@@ -22,6 +25,8 @@ public class VirusSystem : MonoBehaviour
         OrderBehaviour.OnPlayerSuccess += Complete;
         
         stepsToSpawn = Random.Range(minPlayerSteps, maxPlayerSteps);
+        virusIndex = new List<int>();
+        PopulateList(virusIndex);
     }
     
     void Update()
@@ -46,7 +51,12 @@ public class VirusSystem : MonoBehaviour
 
     private void SpawnVirus()
     {
-        currentVirus = Instantiate(virusList[Random.Range(0, virusList.Count)], virusCanvas.transform);
+        int rIndex = Random.Range(0, virusIndex.Count);
+        currentVirus = Instantiate(virusList[virusIndex[rIndex]], virusCanvas.transform);
+        virusIndex.Remove(rIndex); //Removes current virus
+        virusIndex.Add(previousVirus); //Adds previous virus
+        previousVirus = rIndex;
+        
         virusCanvas.gameObject.SetActive(true);
         GameManager.Instance.inGame = false;
     }
@@ -56,5 +66,15 @@ public class VirusSystem : MonoBehaviour
         Destroy(currentVirus);
         virusCanvas.gameObject.SetActive(false);
         GameManager.Instance.inGame = true;
+    }
+
+    private void PopulateList(List<int> targetList)
+    {
+        int index = 0;
+
+        for (int i = 0; i < virusList.Count; i++)
+        {
+            targetList.Add(index++);
+        }
     }
 }

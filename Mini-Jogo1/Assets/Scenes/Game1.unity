@@ -2659,7 +2659,7 @@ MonoBehaviour:
   - Say "[number of steps] [direction]" and I'll move x steps in that direction.
   - The directions are "up", "down, "left" and "right".
   - Please, lets rush it!
-  tBetweenMonologues: 1.5
+  tBetweenMonologues: 2
 --- !u!1 &1630608046
 GameObject:
   m_ObjectHideFlags: 0

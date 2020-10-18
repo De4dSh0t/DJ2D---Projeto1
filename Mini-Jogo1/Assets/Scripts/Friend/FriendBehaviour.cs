@@ -150,5 +150,6 @@ public class FriendBehaviour : MonoBehaviour
         }
         
         inputField.readOnly = false;
+        inputField.ActivateInputField();
     }
 }
