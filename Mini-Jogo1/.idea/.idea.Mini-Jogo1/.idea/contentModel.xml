@@ -30,6 +30,9 @@
             <e p="PlayerTextInput.cs" t="Include" />
           </e>
           <e p="Singleton.cs" t="Include" />
+          <e p="SOD" t="Include">
+            <e p="PressToContinue.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="Clock.cs" t="Include" />
           </e>

@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game1.unity
     guid: e6156844a5cd2c24781cfeffe4978d76
+  - enabled: 1
+    path: Assets/Scenes/ScreenOfDeath.unity
+    guid: 6c9f6596a3d4af54c99eda0735d8b05f
   m_configObjects: {}
