@@ -2646,6 +2646,20 @@ MonoBehaviour:
   - DOWN
   wallTilemap: {fileID: 588612038}
   moveDistance: 3
+  inputField: {fileID: 1041056029}
+  startingMonolgues:
+  - Oh my god, it's you!
+  - I'm so scared... I got kidnapped and woke up here.
+  - I found this phone standing next to me with a ticket saying that I was stuck
+    in a maze and you were going to help me.
+  - It's so dark here... I can barely see what's in front of me!
+  - I'll follow your directions.
+  - 'Lets make this simple:'
+  - Say "run [direction]" and I'll run until I see a wall.
+  - Say "[number of steps] [direction]" and I'll move x steps in that direction.
+  - The directions are "up", "down, "left" and "right".
+  - Please, lets rush it!
+  tBetweenMonologues: 1.5
 --- !u!1 &1630608046
 GameObject:
   m_ObjectHideFlags: 0

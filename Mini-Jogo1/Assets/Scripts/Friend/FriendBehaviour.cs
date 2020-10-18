@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -10,9 +11,14 @@ public class FriendBehaviour : MonoBehaviour
     [SerializeField] private string[] commands;
 
     [Header("Movement Settings")] 
-    [SerializeField] private Tilemap wallTilemap; //To prevent the player going over walls
+    [SerializeField] private Tilemap wallTilemap; //To prevent the "friend" bot going over walls
     [SerializeField] private int moveDistance;
     private Transform friendPos;
+
+    [Header("Monologue Settings")]
+    [SerializeField] private TMP_InputField inputField; //Used to prevent the player responding before the starting monologue
+    [SerializeField] private List<string> startingMonolgues;
+    [SerializeField] private float tBetweenMonologues;
 
     public static Action<string> OnFriendResponse;
     public static Action<Vector3> OnFriendMove;
@@ -21,6 +27,8 @@ public class FriendBehaviour : MonoBehaviour
     {
         friendPos = GetComponent<Transform>();
         PlayerTextInput.OnTextInput += TryMove; //Subscribes to the action "OnTextInput"
+
+        StartCoroutine(StartingMonologue());
     }
 
     /// <summary>
@@ -77,7 +85,7 @@ public class FriendBehaviour : MonoBehaviour
                 }
                 case -1: //WRONG COMMAND
                 {
-                    if (OnFriendResponse != null) OnFriendResponse("Not a command!");
+                    if (OnFriendResponse != null) OnFriendResponse("Sorry, could you repeat?");
                     canMove = false;
                     break;
                 }
@@ -129,5 +137,18 @@ public class FriendBehaviour : MonoBehaviour
 
             if (OnFriendMove != null) OnFriendMove(currentPos); //Used in "EnemyBehaviour"
         }
+    }
+
+    private IEnumerator StartingMonologue()
+    {
+        inputField.readOnly = true;
+        
+        foreach (var monolgue in startingMonolgues)
+        {
+            yield return new WaitForSeconds(tBetweenMonologues + monolgue.Length/20);
+            OnFriendResponse(monolgue);
+        }
+        
+        inputField.readOnly = false;
     }
 }
