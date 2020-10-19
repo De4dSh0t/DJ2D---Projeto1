@@ -20,16 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="401a7faa-f989-419b-b7e3-844574a82d6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/ScreenOfDeath.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Desktop Sprites/ScreenOfDeath.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/ScreenOfDeath.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/ScreenOfDeath.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SOD.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SOD/PressToContinue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SOD/PressToContinue.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObj/Level Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObj/Level Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/Description.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/DifficultyButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/LevelSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu/PauseButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu/PauseButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu/PauseMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu/PauseMenu.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,15 +56,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/Description.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/DifficultyButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/ruips/Desktop/Projetos/1. Universidade/Desenvolvimento de Jogos 2D/DJ2D-Projeto1/Mini-Jogo1/Assets/Scripts/Friend/FriendBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseMenu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,11 +96,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SOD/PressToContinue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Difficulty.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/StartOptions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Description.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Friend/FriendBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/LevelSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/DifficultyButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu/PauseButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu/PauseMenu.cs" />
       </list>
     </option>
   </component>
@@ -111,6 +132,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../../../../Temp Build\Mini-Jogo1.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\ruips\Desktop\Temp Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -157,7 +186,8 @@
       <workItem from="1602753931322" duration="9218000" />
       <workItem from="1602780750973" duration="11266000" />
       <workItem from="1602951080395" duration="5050000" />
-      <workItem from="1603035462228" duration="11185000" />
+      <workItem from="1603035462228" duration="11516000" />
+      <workItem from="1603122117047" duration="9928000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized Project">
       <created>1601226119597</created>
@@ -383,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603045616526</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Created MainMenu and ScreenOfDeath Menu">
+      <created>1603050583123</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1603050583123</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +443,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Updated &quot;FriendBehaviour&quot;" />
     <MESSAGE value="Updated &quot;ChatSystem&quot; and Added &quot;ChatBubble&quot;" />
     <MESSAGE value="Added some Unversioned files" />
     <MESSAGE value="Minor Updates" />
@@ -431,7 +467,8 @@
     <MESSAGE value="Added starting monologues" />
     <MESSAGE value="Minor updates and Added Font asset" />
     <MESSAGE value="Added some logic for the end game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some logic for the end game" />
+    <MESSAGE value="Created MainMenu and ScreenOfDeath Menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created MainMenu and ScreenOfDeath Menu" />
   </component>
   <component name="WindowStateProjectService">
     <state width="420" height="464" key="DebuggerActiveHint" timestamp="1602519497307">
@@ -518,10 +555,14 @@
     </state>
     <state width="1431" height="304" key="GridCell.Tab.3.right/62.0.1474.864@62.0.1474.864" timestamp="1602098150760" />
     <state width="1815" height="391" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1602765075226" />
-    <state x="475" y="218" key="Vcs.Push.Dialog.v2" timestamp="1603045621834">
+    <state x="603" y="134" key="RiderGenerateDialog" timestamp="1603125178131">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="475" y="218" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1603045621834" />
+    <state x="603" y="134" key="RiderGenerateDialog/62.0.1474.864@62.0.1474.864" timestamp="1603125178131" />
+    <state x="475" y="218" key="Vcs.Push.Dialog.v2" timestamp="1603050584306">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="475" y="218" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1603050584306" />
     <state x="583" y="273" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1602788638305" />
     <state x="155" y="93" width="1288" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602956134981">
       <screen x="62" y="0" width="1474" height="864" />

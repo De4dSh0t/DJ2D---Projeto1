@@ -6,9 +6,10 @@ using UnityEngine;
 public class VirusSystem : MonoBehaviour
 {
     [SerializeField] private Canvas virusCanvas;
+    [SerializeField] private List<GameObject> virusList = new List<GameObject>();
     [SerializeField] private int minPlayerSteps; //Steps to spawn the virus
     [SerializeField] private int maxPlayerSteps; //Steps to spawn the virus
-    [SerializeField] private List<GameObject> virusList = new List<GameObject>();
+    [SerializeField] private LevelSettings levelSettings;
     private List<Vector3> playerPos = new List<Vector3>();
     private GameObject currentVirus;
     private bool canSpawn;
@@ -23,6 +24,10 @@ public class VirusSystem : MonoBehaviour
         SortBehaviour.OnPlayerSuccess += Complete;
         TeleportBehaviour.OnPlayerSuccess += Complete;
         OrderBehaviour.OnPlayerSuccess += Complete;
+        
+        //Settings
+        minPlayerSteps = levelSettings.minVirusSpawn;
+        maxPlayerSteps = levelSettings.maxVirusSpawn;
         
         stepsToSpawn = Random.Range(minPlayerSteps, maxPlayerSteps);
         virusIndex = new List<int>();

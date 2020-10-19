@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class FriendBehaviour : MonoBehaviour
@@ -174,7 +175,7 @@ public class FriendBehaviour : MonoBehaviour
     {
         if (enemy.transform.position == transform.position && enemy.canMove)
         {
-            Debug.Log("Dead!");
+            SceneManager.LoadScene("ScreenOfDeath");
         }
     }
 }

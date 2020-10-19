@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     [Header("Movement Settings")] 
-    [SerializeField] private int friendStepsToMove;
+    [SerializeField] private int friendStepsToMove; 
     [SerializeField] private float secToMove;
+    [SerializeField] private LevelSettings levelSettings;
     private Queue<Vector3> friendSteps = new Queue<Vector3>();
     private SpriteRenderer spriteRenderer;
     public bool canMove;
@@ -18,6 +19,13 @@ public class EnemyBehaviour : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = false;
         timer = secToMove;
+
+        //Settings
+        if (!levelSettings.hasEnemy)
+        {
+            gameObject.SetActive(false);
+        }
+        secToMove = levelSettings.timeEnemyMovement;
     }
     
     void Update()
