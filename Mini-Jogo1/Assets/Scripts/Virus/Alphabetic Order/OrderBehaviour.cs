@@ -8,9 +8,9 @@ using Random = UnityEngine.Random;
 public class OrderBehaviour : MonoBehaviour
 {
     private char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-    private readonly char[] buttonChars = new char[10];
+    private readonly char[] buttonChars = new char[6];
     private List<ButtonBehaviour> buttonList = new List<ButtonBehaviour>();
-    private char[] alphabeticOrder = new char[10]; //Array used to compare
+    private char[] alphabeticOrder = new char[6]; //Array used to compare
     private int index;
 
     public static Action OnPlayerMiss;
@@ -66,7 +66,7 @@ public class OrderBehaviour : MonoBehaviour
             index++;
 
             // Successfully finishes the mini challenge
-            if (index >= 10)
+            if (index >= 6)
             {
                 if (OnPlayerSuccess != null) OnPlayerSuccess();
                 ButtonBehaviour.OnButtonPressed -= CheckOrder;

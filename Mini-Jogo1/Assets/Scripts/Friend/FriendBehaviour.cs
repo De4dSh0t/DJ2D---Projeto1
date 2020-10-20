@@ -26,9 +26,11 @@ public class FriendBehaviour : MonoBehaviour
 
     public static Action<string> OnFriendResponse;
     public static Action<Vector3> OnFriendMove;
-
+    
     void Start()
     {
+        GameManager.Instance.OnSceneUnload += UnsubscribeAll;
+
         friendPos = GetComponent<Transform>();
         PlayerTextInput.OnTextInput += TryMove; //Subscribes to the action "OnTextInput"
         OnFriendResponse += PlaySound;
@@ -176,6 +178,7 @@ public class FriendBehaviour : MonoBehaviour
     {
         if (transform.position == MazeGenerator.exitPosition)
         {
+            GameManager.Instance.OnSceneUnload();
             SceneManager.LoadScene("WinScreen");
         }
     }
@@ -184,6 +187,7 @@ public class FriendBehaviour : MonoBehaviour
     {
         if (enemy.transform.position == transform.position && enemy.canMove)
         {
+            GameManager.Instance.OnSceneUnload();
             SceneManager.LoadScene("ScreenOfDeath");
         }
     }
@@ -191,5 +195,12 @@ public class FriendBehaviour : MonoBehaviour
     private void PlaySound(string s)
     {
         AudioManager.Instance.PlaySound(AudioManager.SoundName.ChatNotification);
+    }
+
+    private void UnsubscribeAll()
+    {
+        PlayerTextInput.OnTextInput -= TryMove;
+        OnFriendResponse -= PlaySound;
+        GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
     }
 }

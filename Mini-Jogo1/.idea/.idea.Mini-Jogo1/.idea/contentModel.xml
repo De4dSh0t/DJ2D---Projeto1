@@ -40,6 +40,7 @@
           <e p="Player" t="Include">
             <e p="PlayerTextInput.cs" t="Include" />
           </e>
+          <e p="SceneTransition.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="SOD" t="Include">
             <e p="PressToContinue.cs" t="Include" />

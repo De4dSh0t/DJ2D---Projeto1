@@ -25,7 +25,7 @@ public class PlayerTextInput : MonoBehaviour
         }
     }
 
-    private void ClearText()
+    public void ClearText()
     {
         textInput.text = "";
         textInput.ActivateInputField();

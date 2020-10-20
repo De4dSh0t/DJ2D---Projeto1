@@ -15,6 +15,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
+        GameManager.Instance.OnSceneUnload += UnsubscribeAll;
+        
         FriendBehaviour.OnFriendMove += UpdateQueue;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = false;
@@ -55,11 +57,18 @@ public class EnemyBehaviour : MonoBehaviour
     /// <param name="friendPos"></param>
     private void UpdateQueue(Vector3 friendPos)
     {
+        if (friendSteps.Contains(friendPos)) return;
         friendSteps.Enqueue(friendPos);
     }
 
     private void Move()
     {
         transform.position = friendSteps.Dequeue();
+    }
+
+    private void UnsubscribeAll()
+    {
+        FriendBehaviour.OnFriendMove -= UpdateQueue;
+        GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
     }
 }

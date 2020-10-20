@@ -10,6 +10,7 @@ public class VirusSystem : MonoBehaviour
     [SerializeField] private int minPlayerSteps; //Steps to spawn the virus
     [SerializeField] private int maxPlayerSteps; //Steps to spawn the virus
     [SerializeField] private LevelSettings levelSettings;
+    [SerializeField] private PlayerTextInput player;
     private List<Vector3> playerPos = new List<Vector3>();
     private GameObject currentVirus;
     private bool canSpawn;
@@ -19,6 +20,8 @@ public class VirusSystem : MonoBehaviour
     
     void Start()
     {
+        GameManager.Instance.OnSceneUnload += UnsubscribeAll;
+        
         FriendBehaviour.OnFriendMove += UpdateList;
         CaptchaBehaviour.OnPlayerSuccess += Complete;
         SortBehaviour.OnPlayerSuccess += Complete;
@@ -71,6 +74,7 @@ public class VirusSystem : MonoBehaviour
 
     private void Complete()
     {
+        player.ClearText();
         Destroy(currentVirus);
         virusCanvas.gameObject.SetActive(false);
         GameManager.Instance.inGame = true;
@@ -84,5 +88,15 @@ public class VirusSystem : MonoBehaviour
         {
             targetList.Add(index++);
         }
+    }
+
+    private void UnsubscribeAll()
+    {
+        FriendBehaviour.OnFriendMove -= UpdateList;
+        CaptchaBehaviour.OnPlayerSuccess -= Complete;
+        SortBehaviour.OnPlayerSuccess -= Complete;
+        TeleportBehaviour.OnPlayerSuccess -= Complete;
+        OrderBehaviour.OnPlayerSuccess -= Complete;
+        GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
     }
 }

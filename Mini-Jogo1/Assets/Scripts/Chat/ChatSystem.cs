@@ -13,6 +13,8 @@ public class ChatSystem : MonoBehaviour
 
     void Start()
     {
+        GameManager.Instance.OnSceneUnload += UnsubscribeAll;
+        
         PlayerTextInput.OnTextInput += DisplayPlayerText;
         FriendBehaviour.OnFriendResponse += DisplayFriendText;
     }
@@ -43,5 +45,12 @@ public class ChatSystem : MonoBehaviour
         GameObject message = Instantiate(friendBubble, chatPanel.transform);
         message.GetComponent<ChatBubble>().Setup(text);
         messageList.Add(message);
+    }
+
+    private void UnsubscribeAll()
+    {
+        PlayerTextInput.OnTextInput -= DisplayPlayerText;
+        FriendBehaviour.OnFriendResponse -= DisplayFriendText;
+        GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
     }
 }

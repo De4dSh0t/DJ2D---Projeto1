@@ -1824,6 +1824,7 @@ MonoBehaviour:
   minPlayerSteps: 10
   maxPlayerSteps: 20
   levelSettings: {fileID: 11400000, guid: 3ed5372e4651f194ebd0803c28e26d3a, type: 2}
+  player: {fileID: 756185980}
 --- !u!1 &497305675
 GameObject:
   m_ObjectHideFlags: 0
@@ -4050,6 +4051,7 @@ MonoBehaviour:
   sfxToggle: {fileID: 1699809768}
   volumeSlider: {fileID: 1718968601}
   settings: {fileID: 11400000, guid: 79026afbdef4d1a45b9043c9bc67572a, type: 2}
+  audioSource: {fileID: 0}
 --- !u!1 &1360573091
 GameObject:
   m_ObjectHideFlags: 0

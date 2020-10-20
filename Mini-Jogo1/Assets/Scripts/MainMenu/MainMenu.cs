@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button startBack;
     [SerializeField] private Button optionsButton;
     [SerializeField] private Button optionsBack;
+    [SerializeField] private Button quitButton;
 
     [Header("Options Menu Settings")]
     [SerializeField] private Toggle musicToggle;
@@ -31,6 +32,7 @@ public class MainMenu : MonoBehaviour
         startBack.onClick.AddListener(OpenMain);
         optionsButton.onClick.AddListener(OpenOptions);
         optionsBack.onClick.AddListener(OpenMain);
+        quitButton.onClick.AddListener(CloseGame);
         
         //Options Menu (Sound Settings)
         musicToggle.onValueChanged.AddListener(UpdateMusic);
@@ -82,5 +84,10 @@ public class MainMenu : MonoBehaviour
     {
         settings.volume = volume;
         if (OnVolumeUpdate != null) OnVolumeUpdate();
+    }
+
+    private void CloseGame()
+    {
+        Application.Quit();
     }
 }
