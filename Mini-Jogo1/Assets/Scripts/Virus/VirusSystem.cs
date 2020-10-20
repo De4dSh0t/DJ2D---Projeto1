@@ -56,6 +56,9 @@ public class VirusSystem : MonoBehaviour
 
     private void SpawnVirus()
     {
+        //Play glitch sound
+        AudioManager.Instance.PlaySound(AudioManager.SoundName.Glitch);
+        
         int rIndex = Random.Range(0, virusIndex.Count);
         currentVirus = Instantiate(virusList[virusIndex[rIndex]], virusCanvas.transform);
         virusIndex.Remove(rIndex); //Removes current virus

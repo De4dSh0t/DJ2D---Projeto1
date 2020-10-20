@@ -18,7 +18,7 @@ public class FriendBehaviour : MonoBehaviour
 
     [Header("Monologue Settings")]
     [SerializeField] private TMP_InputField inputField; //Used to prevent the player responding before the starting monologue
-    [SerializeField] private List<string> startingMonolgues;
+    [SerializeField] private List<string> startingMonologues;
     [SerializeField] private float tBetweenMonologues;
 
     [Header("Enemy Settings")]
@@ -31,6 +31,7 @@ public class FriendBehaviour : MonoBehaviour
     {
         friendPos = GetComponent<Transform>();
         PlayerTextInput.OnTextInput += TryMove; //Subscribes to the action "OnTextInput"
+        OnFriendResponse += PlaySound;
 
         StartCoroutine(StartingMonologue());
     }
@@ -67,7 +68,15 @@ public class FriendBehaviour : MonoBehaviour
                 nMoves = wallTilemap.size.x; //Random num (with a minimum of the width of the wall tilemap)
                 isRunning = true;
             }
-        
+            else
+            {
+                if (OnFriendResponse != null) //WRONG COMMAND
+                {
+                    OnFriendResponse("Sorry, could you repeat?");
+                }
+                return;
+            }
+
             //Checks if the input correspond to any command
             for (int i = 0; i < commands.Length; i++)
             {
@@ -140,8 +149,8 @@ public class FriendBehaviour : MonoBehaviour
                     break;
                 }
             }
-            
-            if(!canMove) break;
+
+            if (!canMove) break;
 
             currentPos = friendPos.position;
 
@@ -153,10 +162,10 @@ public class FriendBehaviour : MonoBehaviour
     {
         inputField.readOnly = true;
         
-        foreach (var monolgue in startingMonolgues)
+        foreach (var monologue in startingMonologues)
         {
-            yield return new WaitForSeconds(tBetweenMonologues + monolgue.Length/20);
-            OnFriendResponse(monolgue);
+            yield return new WaitForSeconds(tBetweenMonologues + monologue.Length/20);
+            OnFriendResponse(monologue);
         }
         
         inputField.readOnly = false;
@@ -165,9 +174,9 @@ public class FriendBehaviour : MonoBehaviour
 
     private void CheckExit()
     {
-        if (transform.position == (Vector3Int) MazeGenerator.exitPos)
+        if (transform.position == MazeGenerator.exitPosition)
         {
-            Debug.Log("Exit!");
+            SceneManager.LoadScene("WinScreen");
         }
     }
 
@@ -177,5 +186,10 @@ public class FriendBehaviour : MonoBehaviour
         {
             SceneManager.LoadScene("ScreenOfDeath");
         }
+    }
+
+    private void PlaySound(string s)
+    {
+        AudioManager.Instance.PlaySound(AudioManager.SoundName.ChatNotification);
     }
 }
