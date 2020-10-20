@@ -47,6 +47,7 @@
           <e p="Sound" t="Include">
             <e p="Sound.cs" t="Include" />
             <e p="SoundReferences.cs" t="Include" />
+            <e p="SoundSettings.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Clock.cs" t="Include" />

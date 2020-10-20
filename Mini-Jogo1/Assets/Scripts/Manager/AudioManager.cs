@@ -17,10 +17,14 @@ public class AudioManager : Singleton<AudioManager>
     {
         soundRef = FindObjectOfType<SoundReferences>();
         sounds = soundRef.sounds;
+
+        MainMenu.OnVolumeUpdate += UpdateVolume;
+        PauseMenu.OnVolumeUpdate += UpdateVolume;
     }
 
     public void PlaySound(SoundName sound)
     {
+        if (!soundRef.settings.sfx) return;
         GameObject soundObj = new GameObject();
         soundObj.AddComponent<AudioSource>().PlayOneShot(GetSound(sound)); //Adds audio source and plays sound
     }
@@ -36,5 +40,10 @@ public class AudioManager : Singleton<AudioManager>
         }
 
         return null;
+    }
+
+    private void UpdateVolume()
+    {
+        AudioListener.volume = soundRef.settings.volume;
     }
 }
