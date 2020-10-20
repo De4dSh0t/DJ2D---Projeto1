@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4429,7 +4429,7 @@ MonoBehaviour:
   wallTilemap: {fileID: 588612038}
   moveDistance: 3
   inputField: {fileID: 1041056029}
-  startingMonolgues:
+  startingMonologues:
   - Oh my god, it's you!
   - I'm so scared... I got kidnapped and woke up here.
   - I found this phone standing next to me with a ticket saying that I was stuck
@@ -5709,7 +5709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 44.099976}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1275.8181, y: -560.38885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870976048
@@ -6364,7 +6364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 44.1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1275.8181, y: -623.7675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075535617

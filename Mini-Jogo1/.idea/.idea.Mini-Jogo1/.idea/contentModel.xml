@@ -27,6 +27,7 @@
             <e p="MainMenu.cs" t="Include" />
           </e>
           <e p="Manager" t="Include">
+            <e p="AudioManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
           </e>
           <e p="Maze" t="Include">
@@ -42,6 +43,10 @@
           <e p="Singleton.cs" t="Include" />
           <e p="SOD" t="Include">
             <e p="PressToContinue.cs" t="Include" />
+          </e>
+          <e p="Sound" t="Include">
+            <e p="Sound.cs" t="Include" />
+            <e p="SoundReferences.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Clock.cs" t="Include" />
