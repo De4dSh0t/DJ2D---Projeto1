@@ -20,6 +20,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private SoundSettings settings;
 
+    private AudioSource audioSource;
+
+    public static Action<AudioSource> OnMusicToggle;
     public static Action OnVolumeUpdate;
     
     void Start()
@@ -38,6 +41,9 @@ public class MainMenu : MonoBehaviour
         musicToggle.isOn = settings.music;
         sfxToggle.isOn = settings.sfx;
         volumeSlider.value = settings.volume;
+        
+        //Play MainMenu Theme music (https://www.youtube.com/watch?v=k_oMAGlWKTs)
+        audioSource = AudioManager.Instance.PlayMusic(AudioManager.SoundName.MainMenu);
     }
 
     private void OpenMain()
@@ -63,6 +69,7 @@ public class MainMenu : MonoBehaviour
 
     private void UpdateMusic(bool state)
     {
+        OnMusicToggle(audioSource);
         settings.music = state;
     }
     

@@ -10,7 +10,9 @@ public class AudioManager : Singleton<AudioManager>
     public enum SoundName
     {
         ChatNotification,
-        Glitch
+        Glitch,
+        MainMenu,
+        Game
     }
     
     void Awake()
@@ -20,6 +22,8 @@ public class AudioManager : Singleton<AudioManager>
 
         MainMenu.OnVolumeUpdate += UpdateVolume;
         PauseMenu.OnVolumeUpdate += UpdateVolume;
+        MainMenu.OnMusicToggle += UpdateMusicState;
+        PauseMenu.OnMusicToggle += UpdateMusicState;
     }
 
     public void PlaySound(SoundName sound)
@@ -27,6 +31,16 @@ public class AudioManager : Singleton<AudioManager>
         if (!soundRef.settings.sfx) return;
         GameObject soundObj = new GameObject();
         soundObj.AddComponent<AudioSource>().PlayOneShot(GetSound(sound)); //Adds audio source and plays sound
+    }
+
+    public AudioSource PlayMusic(SoundName sound)
+    {
+        if (!soundRef.settings.music) return null;
+        GameObject musicObj = new GameObject();
+        AudioSource source = musicObj.AddComponent<AudioSource>();
+        source.PlayOneShot(GetSound(sound));
+        source.loop = true;
+        return musicObj.GetComponent<AudioSource>();
     }
 
     private AudioClip GetSound(SoundName soundName)
@@ -40,6 +54,12 @@ public class AudioManager : Singleton<AudioManager>
         }
 
         return null;
+    }
+
+    private void UpdateMusicState(AudioSource source)
+    {
+        if (source.isPlaying) source.Pause();
+        else source.UnPause();
     }
 
     private void UpdateVolume()

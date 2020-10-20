@@ -21,6 +21,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private SoundSettings settings;
 
+    public AudioSource audioSource;
+
+    public static Action<AudioSource> OnMusicToggle;
     public static Action OnVolumeUpdate;
     
     void Start()
@@ -43,6 +46,7 @@ public class PauseMenu : MonoBehaviour
     
     private void ClosePause()
     {
+        if (musicToggle.isOn) audioSource.UnPause();
         canvas.gameObject.SetActive(false);
         GameManager.Instance.inGame = true;
         Time.timeScale = 1;
@@ -68,6 +72,7 @@ public class PauseMenu : MonoBehaviour
     private void UpdateMusic(bool state)
     {
         settings.music = state;
+        if (OnMusicToggle != null) OnMusicToggle(audioSource);
     }
     
     private void UpdateSFX(bool state)

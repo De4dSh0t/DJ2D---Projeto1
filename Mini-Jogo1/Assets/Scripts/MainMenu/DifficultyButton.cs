@@ -14,8 +14,9 @@ public class DifficultyButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [SerializeField] private int minVirusSpawn;
     [SerializeField] private int maxVirusSpawn;
     [SerializeField] private LevelSettings levelSettings;
+    [SerializeField] private GameObject loadingScreen;
     private Button button;
-
+    
     public static Action<string> OnDescriptionUpdate;
 
     void Start()
@@ -35,6 +36,7 @@ public class DifficultyButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
         levelSettings.minVirusSpawn = minVirusSpawn;
         levelSettings.maxVirusSpawn = maxVirusSpawn;
         
+        loadingScreen.SetActive(true);
         SceneManager.LoadScene("Game1");
     }
 
