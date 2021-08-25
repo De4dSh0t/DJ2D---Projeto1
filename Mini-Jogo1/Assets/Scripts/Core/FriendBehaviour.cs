@@ -32,8 +32,6 @@ namespace Core
         
         void Start()
         {
-            GameManager.Instance.OnSceneUnload += UnsubscribeAll;
-            
             friendPos = GetComponent<Transform>();
             PlayerTextInput.OnTextInput += TryMove; //Subscribes to the action "OnTextInput"
             OnFriendResponse += PlaySound;
@@ -179,7 +177,6 @@ namespace Core
         {
             if (transform.position == MazeGenerator.exitPosition)
             {
-                GameManager.Instance.OnSceneUnload();
                 SceneManager.LoadScene("WinScreen");
             }
         }
@@ -188,7 +185,6 @@ namespace Core
         {
             if (enemy.transform.position == transform.position && enemy.canMove)
             {
-                GameManager.Instance.OnSceneUnload();
                 SceneManager.LoadScene("ScreenOfDeath");
             }
         }
@@ -198,11 +194,10 @@ namespace Core
             AudioManager.Instance.PlaySound(AudioManager.SoundName.ChatNotification);
         }
         
-        private void UnsubscribeAll()
+        private void OnDestroy()
         {
             PlayerTextInput.OnTextInput -= TryMove;
             OnFriendResponse -= PlaySound;
-            GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
         }
     }
 }

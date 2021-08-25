@@ -15,8 +15,6 @@ namespace Chat
         
         void Start()
         {
-            GameManager.Instance.OnSceneUnload += UnsubscribeAll;
-        
             PlayerTextInput.OnTextInput += DisplayPlayerText;
             FriendBehaviour.OnFriendResponse += DisplayFriendText;
         }
@@ -49,11 +47,10 @@ namespace Chat
             messageList.Add(message);
         }
         
-        private void UnsubscribeAll()
+        private void OnDestroy()
         {
             PlayerTextInput.OnTextInput -= DisplayPlayerText;
             FriendBehaviour.OnFriendResponse -= DisplayFriendText;
-            GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
         }
     }
 }

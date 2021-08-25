@@ -71,9 +71,8 @@ namespace UI.Menu
         
         private void LoadMainMenu()
         {
-            GameManager.Instance.OnSceneUnload();
-            GameManager.Instance.inGame = true;
             Time.timeScale = 1;
+            GameManager.Instance.inGame = true;
             SceneManager.LoadScene("MainMenu");
         }
         

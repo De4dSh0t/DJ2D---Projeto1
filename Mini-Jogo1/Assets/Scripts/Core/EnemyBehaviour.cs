@@ -17,8 +17,6 @@ namespace Core
         
         void Start()
         {
-            GameManager.Instance.OnSceneUnload += UnsubscribeAll;
-            
             FriendBehaviour.OnFriendMove += UpdateQueue;
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.enabled = false;
@@ -36,7 +34,7 @@ namespace Core
         {
             if (friendSteps.Count >= friendStepsToMove)
             {
-                if (!canMove) FriendBehaviour.OnFriendResponse("I heard something! I think I'm not alone!");
+                if (!canMove) FriendBehaviour.OnFriendResponse?.Invoke("I heard something! I think I'm not alone!");
                 canMove = true;
                 spriteRenderer.enabled = true;
             }
@@ -68,10 +66,9 @@ namespace Core
             transform.position = friendSteps.Dequeue();
         }
         
-        private void UnsubscribeAll()
+        private void OnDestroy()
         {
             FriendBehaviour.OnFriendMove -= UpdateQueue;
-            GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
         }
     }
 }

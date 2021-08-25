@@ -28,8 +28,6 @@ namespace Virus
     
         void Start()
         {
-            GameManager.Instance.OnSceneUnload += UnsubscribeAll;
-            
             FriendBehaviour.OnFriendMove += UpdateList;
             CaptchaBehaviour.OnPlayerSuccess += Complete;
             SortBehaviour.OnPlayerSuccess += Complete;
@@ -98,14 +96,13 @@ namespace Virus
             }
         }
         
-        private void UnsubscribeAll()
+        private void OnDestroy()
         {
             FriendBehaviour.OnFriendMove -= UpdateList;
             CaptchaBehaviour.OnPlayerSuccess -= Complete;
             SortBehaviour.OnPlayerSuccess -= Complete;
             TeleportBehaviour.OnPlayerSuccess -= Complete;
             OrderBehaviour.OnPlayerSuccess -= Complete;
-            GameManager.Instance.OnSceneUnload -= UnsubscribeAll;
         }
     }
 }
