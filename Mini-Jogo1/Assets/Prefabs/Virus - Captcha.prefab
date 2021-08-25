@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5a4ba8d831bc4aa132b7c450a7bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  captchaLength: 10
+  captchaLength: 7
 --- !u!114 &1034449810502852067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,9 +457,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Captcha
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5e5486a4b9596324bb97b57bd0fa7615, type: 2}
-  m_sharedMaterial: {fileID: 7798816775084930531, guid: 5e5486a4b9596324bb97b57bd0fa7615,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -489,11 +488,11 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 4.4
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

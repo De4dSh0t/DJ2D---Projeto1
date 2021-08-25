@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    [Header("UI Settings")]
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject pause;
     [SerializeField] private GameObject options;
@@ -20,9 +21,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Toggle sfxToggle;
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private SoundSettings settings;
-
+    
+    // Audio Settings
     public AudioSource audioSource;
-
+    
+    // Events
     public static Action<AudioSource> OnMusicToggle;
     public static Action OnVolumeUpdate;
     
@@ -75,7 +78,7 @@ public class PauseMenu : MonoBehaviour
     private void UpdateMusic(bool state)
     {
         settings.music = state;
-        if (OnMusicToggle != null) OnMusicToggle(audioSource);
+        OnMusicToggle?.Invoke(audioSource);
     }
     
     private void UpdateSFX(bool state)

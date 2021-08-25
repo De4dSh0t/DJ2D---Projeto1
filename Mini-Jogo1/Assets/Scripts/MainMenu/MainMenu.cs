@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    [Header("UI Settings")]
     [SerializeField] private GameObject main;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject options;
@@ -14,15 +15,17 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button optionsButton;
     [SerializeField] private Button optionsBack;
     [SerializeField] private Button quitButton;
-
+    
     [Header("Options Menu Settings")]
     [SerializeField] private Toggle musicToggle;
     [SerializeField] private Toggle sfxToggle;
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private SoundSettings settings;
-
+    
+    // Audio Settings
     private AudioSource audioSource;
-
+    
+    // Events
     public static Action<AudioSource> OnMusicToggle;
     public static Action OnVolumeUpdate;
     
@@ -71,7 +74,7 @@ public class MainMenu : MonoBehaviour
 
     private void UpdateMusic(bool state)
     {
-        OnMusicToggle(audioSource);
+        OnMusicToggle?.Invoke(audioSource);
         settings.music = state;
     }
     
@@ -83,7 +86,7 @@ public class MainMenu : MonoBehaviour
     private void UpdateVolume(float volume)
     {
         settings.volume = volume;
-        if (OnVolumeUpdate != null) OnVolumeUpdate();
+        OnVolumeUpdate?.Invoke();
     }
 
     private void CloseGame()

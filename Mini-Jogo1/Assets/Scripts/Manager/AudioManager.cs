@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
 {
@@ -35,11 +33,17 @@ public class AudioManager : Singleton<AudioManager>
 
     public AudioSource PlayMusic(SoundName sound)
     {
-        if (!soundRef.settings.music) return null;
+        // Create musicObj
         GameObject musicObj = new GameObject();
+        
+        // Add audioSource
         AudioSource source = musicObj.AddComponent<AudioSource>();
-        source.PlayOneShot(GetSound(sound));
         source.loop = true;
+        source.PlayOneShot(GetSound(sound));
+        
+        // Check if music settings has music toggled off (Pause)
+        if (!soundRef.settings.music) source.Pause();
+        
         return musicObj.GetComponent<AudioSource>();
     }
 
@@ -52,12 +56,12 @@ public class AudioManager : Singleton<AudioManager>
                  return sound.clip;
             }
         }
-
         return null;
     }
-
+    
     private void UpdateMusicState(AudioSource source)
     {
+        if (source == null) return;
         if (source.isPlaying) source.Pause();
         else source.UnPause();
     }
