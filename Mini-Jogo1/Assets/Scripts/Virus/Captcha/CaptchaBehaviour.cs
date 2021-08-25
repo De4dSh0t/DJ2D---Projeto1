@@ -12,7 +12,8 @@ public class CaptchaBehaviour : MonoBehaviour
     private readonly char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
     private readonly int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     private string captcha;
-
+    
+    // Event
     public static Action OnPlayerSuccess;
     
     void Start()
@@ -72,9 +73,12 @@ public class CaptchaBehaviour : MonoBehaviour
     /// <param name="attempt"></param>
     private void Check(string attempt)
     {
+        // Remove spaces
+        attempt = attempt.Replace(" ", "");
+        
         if (attempt == captcha)
         {
-            if(OnPlayerSuccess != null) OnPlayerSuccess();
+            OnPlayerSuccess?.Invoke();
             PlayerTextInput.OnTextInput -= Check;
         }
         else
