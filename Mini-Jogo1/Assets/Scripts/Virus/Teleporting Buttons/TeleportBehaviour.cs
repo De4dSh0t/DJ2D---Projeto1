@@ -1,51 +1,55 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class TeleportBehaviour : MonoBehaviour
+namespace Virus.Teleporting_Buttons
 {
-    [SerializeField] private float rate;
-    [SerializeField] private Vector3 min;
-    [SerializeField] private Vector3 max;
-    private List<Button> buttonList = new List<Button>();
-    private int destroyedButtons;
-
-    public static Action OnPlayerSuccess;
-
-    void Start()
+    public class TeleportBehaviour : MonoBehaviour
     {
-        buttonList.AddRange(GetComponentsInChildren<Button>());
-        InvokeRepeating(nameof(Teleport), 0, rate);
-    }
-
-    void Update()
-    {
-        Check();
-    }
-
-    private void Teleport()
-    {
-        if (buttonList.Count == 0) return;
+        [Header("Movement Settings")]
+        [SerializeField] private float rate;
+        [SerializeField] private Vector3 min;
+        [SerializeField] private Vector3 max;
+        private readonly List<Button> buttonList = new List<Button>();
+        private int destroyedButtons;
         
-        foreach (var button in buttonList)
+        // Event
+        public static Action OnPlayerSuccess;
+        
+        void Start()
         {
-            button.transform.position = new Vector3(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
+            buttonList.AddRange(GetComponentsInChildren<Button>());
+            InvokeRepeating(nameof(Teleport), 0, rate);
         }
-    }
-    
-    private void Check()
-    {
-        if (destroyedButtons == buttonList.Count)
+        
+        void Update()
         {
-            OnPlayerSuccess();
+            Check();
         }
-    }
-
-    public void UpdateCount()
-    {
-        destroyedButtons++;
+        
+        private void Teleport()
+        {
+            if (buttonList.Count == 0) return;
+            
+            foreach (var button in buttonList)
+            {
+                button.transform.position = new Vector3(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
+            }
+        }
+        
+        private void Check()
+        {
+            if (destroyedButtons == buttonList.Count)
+            {
+                OnPlayerSuccess?.Invoke();
+            }
+        }
+        
+        public void UpdateCount()
+        {
+            destroyedButtons++;
+        }
     }
 }

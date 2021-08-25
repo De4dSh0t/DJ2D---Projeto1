@@ -1,20 +1,27 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Clock : MonoBehaviour
+namespace UI
 {
-    private TMP_Text clockText;
-
-    void Start()
+    public class Clock : MonoBehaviour
     {
-        clockText = GetComponent<TMP_Text>();
-    }
-    
-    void Update()
-    {
-        clockText.text = DateTime.Now.ToShortTimeString();
+        private TMP_Text clockText;
+        
+        void Start()
+        {
+            clockText = GetComponent<TMP_Text>();
+        }
+        
+        void Update()
+        {
+            UpdateClock();
+        }
+        
+        private void UpdateClock()
+        {
+            // Updates text to match desktop time 
+            clockText.text = DateTime.Now.ToShortTimeString();
+        }
     }
 }

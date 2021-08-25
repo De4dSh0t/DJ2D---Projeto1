@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ButtonInvisible : MonoBehaviour
+namespace Virus.Teleporting_Buttons
 {
-    public void Invisible()
+    public class ButtonInvisible : MonoBehaviour
     {
-        gameObject.SetActive(false);
+        public void Invisible()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
