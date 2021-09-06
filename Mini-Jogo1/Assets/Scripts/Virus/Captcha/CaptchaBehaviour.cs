@@ -16,7 +16,7 @@ namespace Virus.Captcha
         private string captcha;
         
         // Event
-        public static Action OnPlayerSuccess;
+        public static event Action OnPlayerSuccess;
         
         void Start()
         {
@@ -46,14 +46,8 @@ namespace Virus.Captcha
                         int letterCase = Random.Range(0, 2);
                         int rIndex = Random.Range(0, alphabet.Length - 1);
                         
-                        if (letterCase == 1) //Lowercase
-                        {
-                            gCaptcha += alphabet[rIndex].ToString().ToLower();
-                        }
-                        else //Lowercase
-                        {
-                            gCaptcha += alphabet[rIndex];
-                        }
+                        if (letterCase == 1) gCaptcha += alphabet[rIndex].ToString().ToLower(); // Lowercase
+                        else gCaptcha += alphabet[rIndex]; // Uppercase
                         
                         break;
                     }

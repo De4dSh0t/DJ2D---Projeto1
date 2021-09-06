@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: 1
   sfx: 1
-  volume: 1
+  volume: 0.5282052

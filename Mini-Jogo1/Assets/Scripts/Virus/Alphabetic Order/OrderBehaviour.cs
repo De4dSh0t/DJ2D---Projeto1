@@ -16,8 +16,8 @@ namespace Virus.Alphabetic_Order
         private int index;
         
         // Events
-        public static Action OnPlayerMiss;
-        public static Action OnPlayerSuccess;
+        public static event Action OnPlayerMiss;
+        public static event Action OnPlayerSuccess;
         
         void Start()
         {

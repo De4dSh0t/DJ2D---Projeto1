@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace UI.Menu
@@ -16,6 +17,11 @@ namespace UI.Menu
         private void UpdateDescription(string text)
         {
             description.text = text;
+        }
+        
+        private void OnDestroy()
+        {
+            DifficultyButton.OnDescriptionUpdate -= UpdateDescription;
         }
     }
 }

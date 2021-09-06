@@ -14,7 +14,7 @@ namespace Virus.Sort_Numbers
         private Color defaultColor;
         
         // Event
-        public static Action<string> OnButtonPressed;
+        public static event Action<string> OnButtonPressed;
         
         private void Awake()
         {

@@ -32,13 +32,22 @@ namespace Core
         
         void Update()
         {
-            if (friendSteps.Count >= friendStepsToMove)
+            HandleStart();
+            HandleMovement();
+        }
+        
+        private void HandleStart()
+        {
+            if (friendSteps.Count >= friendStepsToMove && !canMove)
             {
-                if (!canMove) FriendBehaviour.OnFriendResponse?.Invoke("I heard something! I think I'm not alone!");
+                FriendBehaviour.OnFriendResponse?.Invoke("I heard something! I think I'm not alone!");
                 canMove = true;
                 spriteRenderer.enabled = true;
             }
-            
+        }
+        
+        private void HandleMovement()
+        {
             if (canMove && friendSteps.Count != 0)
             {
                 timer -= Time.deltaTime;

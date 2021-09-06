@@ -21,11 +21,10 @@ namespace Virus
         [SerializeField] private PlayerTextInput player;
         private readonly List<Vector3> playerPos = new List<Vector3>();
         private GameObject currentVirus;
-        private bool canSpawn;
-        private int stepsToSpawn;
         private List<int> virusIndex; //Prevent repetition of viruses
         private int previousVirus;
-    
+        private int stepsToSpawn;
+        
         void Start()
         {
             FriendBehaviour.OnFriendMove += UpdateList;
@@ -45,16 +44,15 @@ namespace Virus
         
         void Update()
         {
+            HandleTrigger();
+        }
+        
+        private void HandleTrigger()
+        {
             if (playerPos.Count >= stepsToSpawn && playerPos.Count != 0)
             {
-                canSpawn = true;
                 stepsToSpawn += Random.Range(minPlayerSteps, maxPlayerSteps);
-            }
-            
-            if (canSpawn)
-            {
                 SpawnVirus();
-                canSpawn = false;
             }
         }
         
@@ -68,19 +66,24 @@ namespace Virus
             //Play glitch sound
             AudioManager.Instance.PlaySound(AudioManager.SoundName.Glitch);
             
+            // Choose random virus
             int rIndex = Random.Range(0, virusIndex.Count);
             currentVirus = Instantiate(virusList[virusIndex[rIndex]], virusCanvas.transform);
             virusIndex.Remove(rIndex); //Removes current virus
             virusIndex.Add(previousVirus); //Adds previous virus
             previousVirus = rIndex;
             
+            // Activate virus canvas
             virusCanvas.gameObject.SetActive(true);
             GameManager.Instance.inGame = false;
         }
         
         private void Complete()
         {
+            // Reset inputfield
             player.ClearText();
+            
+            // Remove virus from canvas
             Destroy(currentVirus);
             virusCanvas.gameObject.SetActive(false);
             GameManager.Instance.inGame = true;

@@ -14,6 +14,11 @@ namespace Core
         
         private void Update()
         {
+            HandleInput();
+        }
+        
+        private void HandleInput()
+        {
             if (Input.GetKeyDown(KeyCode.Return) && textInput.text != "")
             {
                 SaveText();

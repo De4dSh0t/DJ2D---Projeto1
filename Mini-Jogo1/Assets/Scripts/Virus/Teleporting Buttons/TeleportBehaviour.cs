@@ -16,7 +16,7 @@ namespace Virus.Teleporting_Buttons
         private int destroyedButtons;
         
         // Event
-        public static Action OnPlayerSuccess;
+        public static event Action OnPlayerSuccess;
         
         void Start()
         {

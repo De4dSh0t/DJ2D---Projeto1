@@ -15,8 +15,8 @@ namespace Virus.Sort_Numbers
         private int index;
         
         // Event
-        public static Action OnPlayerMiss;
-        public static Action OnPlayerSuccess;
+        public static event Action OnPlayerMiss;
+        public static event Action OnPlayerSuccess;
         
         void Start()
         {

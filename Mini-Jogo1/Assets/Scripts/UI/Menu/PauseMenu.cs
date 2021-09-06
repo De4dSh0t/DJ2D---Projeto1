@@ -28,8 +28,8 @@ namespace UI.Menu
         public AudioSource audioSource;
         
         // Events
-        public static Action<AudioSource> OnMusicToggle;
-        public static Action OnVolumeUpdate;
+        public static event Action<AudioSource> OnMusicToggle;
+        public static event Action OnVolumeUpdate;
         
         void Start()
         {

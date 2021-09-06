@@ -19,8 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="401a7faa-f989-419b-b7e3-844574a82d6a" name="Default Changelist" comment="Changed folder structure and Added namespaces">
+    <list default="true" id="401a7faa-f989-419b-b7e3-844574a82d6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mini-Jogo1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObj/Sound Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObj/Sound Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EnemyBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/FriendBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/FriendBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerTextInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerTextInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Description.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Description.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/DifficultyButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/DifficultyButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,27 +54,25 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/DifficultyButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/CameraSize.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/PlayerTextInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/PressToContinue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Description.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/ruips/Universidade/Temp/DJ2D-Projeto1/Mini-Jogo1/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/SceneTransition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EnemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/MazeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/FriendBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/ruips/Universidade/Temp/DJ2D-Projeto1/Mini-Jogo1/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -75,36 +89,36 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu/DifficultyButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu/PauseMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Description.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Description.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LevelSettings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/DifficultyButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Clock.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/SoundSettings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/SoundReferences.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTextInput.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Core/PlayerTextInput.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/PressToContinue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/CameraSize.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/MazeGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Singleton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/SceneTransition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Chat/ChatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/SoundReferences.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/EnemyBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/FriendBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Chat/ChatBubble.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Chat/ChatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/PlayerTextInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Description.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/DifficultyButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Alphabetic Order/OrderBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/ButtonInvisible.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Captcha/CaptchaBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/ButtonBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Sort Numbers/SortBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Teleporting Buttons/TeleportBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Virus/VirusSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1i648H4cTQsMOgJOGlciJywQj3R" />
@@ -187,7 +201,8 @@
       <workItem from="1603122117047" duration="11116000" />
       <workItem from="1603202506062" duration="24303000" />
       <workItem from="1629810377814" duration="1215000" />
-      <workItem from="1629899459612" duration="6717000" />
+      <workItem from="1629899459612" duration="8185000" />
+      <workItem from="1630929641471" duration="3997000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized Project">
       <created>1601226119597</created>
@@ -476,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629905489573</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Changed OnSceneUnload to Unity's OnDestroy method to handle unsubscribe methods">
+      <created>1629908213506</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1629908213506</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +521,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Updated Game1 Scene and organized some assets" />
     <MESSAGE value="Updated FriendBehaviour with a &quot;run&quot; command" />
     <MESSAGE value="Added &quot;Clock&quot; script" />
     <MESSAGE value="Minor Updates and Reorganized Player Scripts" />
@@ -524,6 +545,7 @@
     <MESSAGE value="Fixed music null reference" />
     <MESSAGE value="Fixed CAPTCHA bug" />
     <MESSAGE value="Changed folder structure and Added namespaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed folder structure and Added namespaces" />
+    <MESSAGE value="Changed OnSceneUnload to Unity's OnDestroy method to handle unsubscribe methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed OnSceneUnload to Unity's OnDestroy method to handle unsubscribe methods" />
   </component>
 </project>

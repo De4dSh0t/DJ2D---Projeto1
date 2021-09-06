@@ -24,7 +24,10 @@ namespace UI.Menu
         
         private void OpenPauseMenu()
         {
+            // Pause Audio
             if (audioSource != null) audioSource.Pause();
+            
+            // Enable PauseMenu canvas
             pauseCanvas.gameObject.SetActive(true);
             GameManager.Instance.inGame = false;
             Time.timeScale = 0;

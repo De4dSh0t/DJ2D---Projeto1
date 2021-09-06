@@ -19,7 +19,7 @@ namespace UI.Menu
         private Button button;
         
         // Event
-        public static Action<string> OnDescriptionUpdate;
+        public static event Action<string> OnDescriptionUpdate;
         
         void Start()
         {
@@ -44,12 +44,12 @@ namespace UI.Menu
         
         public void OnPointerEnter(PointerEventData eventData)
         {
-            OnDescriptionUpdate(description);
+            OnDescriptionUpdate?.Invoke(description);
         }
         
         public void OnPointerExit(PointerEventData eventData)
         {
-            OnDescriptionUpdate("");
+            OnDescriptionUpdate?.Invoke("");
         }
     }
 }

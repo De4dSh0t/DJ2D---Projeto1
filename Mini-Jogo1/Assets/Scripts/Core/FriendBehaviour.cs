@@ -58,7 +58,7 @@ namespace Core
             Vector3 currentPos = friendPos.position;
             int nMoves = 1;
             bool canMove = true;
-            bool isRunning = false; //Prevents the friend "bot" to respond to each "run" command
+            bool isRunning = false; //Prevents the friend "bot" from responding to each "run" command
             
             if (words.Length == 2)
             {
@@ -89,7 +89,7 @@ namespace Core
                 }
             }
             
-            //Moves the "friend" bot "nMoves" times, allways checking if it's possible to do so
+            //Moves the "friend" bot "nMoves" times, always checking if it's possible to do so
             for (int i = 0; i < nMoves; i++)
             {
                 switch (direction)
